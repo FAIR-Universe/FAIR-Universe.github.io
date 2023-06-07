@@ -7,7 +7,6 @@ website:
   favicon: images/LBL_Vert_547_rgb.jpg  
   
   page-footer: 
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/), with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com)"
     left: "&copy; CC-By FAIR Universe"
  
   navbar:
