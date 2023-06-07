@@ -1,0 +1,16 @@
+---
+title: "Team"
+description: |
+  The FAIR Universe project is made up of a diverse set of researchers across high energy physics, cosmology, and machine learning.
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: false
+    toc_depth: 3
+---
+
+# FAIR Universe members
+
+## LBNL
+
+## University of Washington

@@ -1,0 +1,12 @@
+<center><a><img src="images/LBL_Vert_547_rgb.jpg" alt="NASA logo to left of Openscapes logo" width="300px"/></a></center>
+
+<center><h1>FAIR Universe</h1></center>
+<br>
+
+We are building a platform for the hosting machine learning competitions to drive forward discoveries in high energy physics and cosmology. The collaboration includes LBNL, the University of Washington, and ChaLearn, a non-profit that organizes challenges to stimulate research in machine learning.
+
+**Project announcements**: [LBNL](https://cs.lbl.gov/news-media/news/2022/new-fair-universe-project-aims-to-build-supercomputer-scale-ai-benchmarks-for-hep-and-beyond/) • [DoE](https://www.newswise.com/doescience/department-of-energy-announces-6-4-million-for-artificial-intelligence-research-in-high-energy-physics/?article_id=779782)
+
+<!-- Learn about our recent work: [Blog Posts](/about.qmd#blog) • [Presentations](/about.qmd#slides) • [Annual Reports](https://github.com/NASA-Openscapes/how_we_work) • [Flywheel Preprint](https://nasa-openscapes.github.io/about.html#flywheel-preprint) • [White Paper: The Value of Hosted JupyterHubs](https://nasa-openscapes.github.io/about.html#white-paper-value-of-hosted-jupyterhubs)  -->
+
+<!-- Please connect with us on Twitter [\@openscapes](https://twitter.com/openscapes) or join [our newsletter](https://docs.google.com/forms/d/e/1FAIpQLSdgVXRp3V-w94GPWkR31RUfyBl37EphdQSlCOcnyeNlf8OLWw/viewform) -->

@@ -1,0 +1,7 @@
+---
+title: "Events"
+description: |
+  Events and News from the FAIR Universe Project 
+---
+
+## December 2022: FAIR Universe kick off workshop
