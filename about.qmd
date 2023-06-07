@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: |
-  We are an internaitonal team lead by scientists at Lawrence Berkeley National Laboratory building a platform for the hosting machine learning competitions to drive forward discoveries in high energy physics and cosmology. The collaboration includes LBNL, the University of Washington, and ChaLearn, a non-profit that organizes challenges to stimulate research in machine learning.
+  We are an internaitonal team lead by scientists at Lawrence Berkeley National Laboratory building a platform for the hosting of machine learning competitions to drive forward discoveries in high energy physics and cosmology. The collaboration includes LBNL, the University of Washington, and ChaLearn, a non-profit that organizes challenges to stimulate research in machine learning.
 ---
 
 ## FAIR Universe
