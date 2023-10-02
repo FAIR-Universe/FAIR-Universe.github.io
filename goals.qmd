@@ -1,15 +1,13 @@
 ---
 title: "Goals"
 description: |
-  The FAIR Universe project is made up of a diverse set of researchers across high energy physics, cosmology, and machine learning.
+  We are building an open, large-compute-scale AI ecosystem for sharing datasets, training large models, fine-tuning those models, and hosting challenges and benchmarks. Hosting of all these datasets and benchmarks will be achieved by interfacing the NERSC HPC center to Codabench, a recently developed open-source platform, to provide a next genera- tion reproducible-science AI ecosystem. 
 output:
   distill::distill_article:
     self_contained: false
     toc: false
     toc_depth: 3
 ---
-
-# Goals
 
 Tackling the next generation of AI applications for high energy physics (HEP), in particular those that are uncertainty-aware, requires the creation of an ecosystem that can enable community access to datasets, benchmarks and existing algorithms backed by large-scale compute. This project will build the essential pieces of such an ecosystem through deployment of:
 
