@@ -1,0 +1,20 @@
+---
+title: "Goals"
+description: |
+  The FAIR Universe project is made up of a diverse set of researchers across high energy physics, cosmology, and machine learning.
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: false
+    toc_depth: 3
+---
+
+# Goals
+
+Tackling the next generation of AI applications for high energy physics (HEP), in particular those that are uncertainty-aware, requires the creation of an ecosystem that can enable community access to datasets, benchmarks and existing algorithms backed by large-scale compute. This project will build the essential pieces of such an ecosystem through deployment of:
+
+1. Three HEP systematic uncertainty datasets and tasks, of increasing sophistication, tailored for studies of systematic-uncertainty aware AI techniques, in particle physics and cosmology.
+2. A set of HEP-AI challenges and long-lived task and algorithm benchmarks addressing compelling questions about the impact of systematic effects in AI models.
+3. An HPC-enabled AI benchmark platform capable of hosting datasets and models; producing new simulated datasets; applying new AI algorithms on existing datasets; and applying uploaded AI algo- rithms on new datasets.
+   
+The collaboration with Codabench and NERSC will ensure that the project platform, benchmarks and a portfolio of algorithms will be curated and made accessible, and therefore continue to benefit the HEP community, as well as other sciences and the machine learning research community well beyond the end of the project. The research community will benefit from being exposed to well-established, empirical UQ approaches for estimation that experimenters have deployed on problems with hundreds of systematic effects. The develop- ment of principled methodologies to quantify the impact of systematic effects in the training and inference of ML models, will increase the trust of the scientific community on AI methods applied to experimental high-energy physics and beyond. The progressive structure of our challenges will bring together activity across particle physics and cosmology. Finally, both the methods and platform developed in this project will serve as a foundation for future AI challenges and benchmarks in high-energy physics, scientific and industrial applications.

@@ -17,6 +17,8 @@ website:
     #   href: index.html
     - text: "About"
       href: about.qmd
+    - text: "Goals"
+      href: goals.qmd
     - text: "Team"
       href: team.qmd
     - text: "Events"
