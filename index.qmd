@@ -12,15 +12,19 @@ The collaboration includes scientists from Lawrence Berkeley National Laboratory
 
 ## November 27, 2022: Project announcement
 
-[LBNL](https://cs.lbl.gov/news-media/news/2022/new-fair-universe-project-aims-to-build-supercomputer-scale-ai-benchmarks-for-hep-and-beyond/) • [DoE](https://www.newswise.com/doescience/department-of-energy-announces-6-4-million-for-artificial-intelligence-research-in-high-energy-physics/?article_id=779782)
+The FAIR Universe project received funding as part of a $6.4 million DoE spend on AI in high energy physics:
+
+- [LBNL announcement](https://cs.lbl.gov/news-media/news/2022/new-fair-universe-project-aims-to-build-supercomputer-scale-ai-benchmarks-for-hep-and-beyond/) 
+- [DoE announcement](https://www.newswise.com/doescience/department-of-energy-announces-6-4-million-for-artificial-intelligence-research-in-high-energy-physics/?article_id=779782)
 
 ## October 2, 2023: First toy challenge
 
-We have designed and released our first toy challenge [on the Codabench platform](https://www.codabench.org/competitions/1152/).
+We have designed and released our first toy challenge [on the Codabench platform](https://www.codabench.org/competitions/1152/). This challenge is designed to test the platform and provide a simple example for the community to follow. We have developed a toy dataset to illustrate the types of analyses performed on real data from particle accelerators.
+
 
 ## November 29, 2023: Particle Physics challenge trial
 
-We will be hosting a hackathon at the [Artificial Intelligence and the Uncertainty Challenge in Fundamental Physics](https://indico.cern.ch/event/1067246/) workshop on Wednesday November 29, 2023. Closer to the date we will be posting more information about the challenge problem and datasets, which will be hosted on [Codabench](https://www.codabench.org/). 
+We will be hosting a hackathon at the [Artificial Intelligence and the Uncertainty Challenge in Fundamental Physics](https://indico.cern.ch/event/1067246/) workshop on Wednesday November 29, 2023. We are planning to release a tiral version of a challenge using detailed physics simulations of accelerator data. More information about the dataset and challenge will be released here closer to the date.
 
 <!-- Learn about our recent work: [Blog Posts](/about.qmd#blog) • [Presentations](/about.qmd#slides) • [Annual Reports](https://github.com/NASA-Openscapes/how_we_work) • [Flywheel Preprint](https://nasa-openscapes.github.io/about.html#flywheel-preprint) • [White Paper: The Value of Hosted JupyterHubs](https://nasa-openscapes.github.io/about.html#white-paper-value-of-hosted-jupyterhubs)  -->
 

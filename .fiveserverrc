@@ -1,5 +1,5 @@
 {
   "port": 8085,
-  "root": "_site",
+  "root": "/_site",
   "open": "index.html"
 }
