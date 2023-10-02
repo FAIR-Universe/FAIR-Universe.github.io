@@ -6,7 +6,7 @@ The collaboration is building a large-compute-scale AI platform for the hosting 
 
 The collaboration includes scientists from Lawrence Berkeley National Laboratory, Université Paris-Saclay, the University of Washington, and ChaLearn, a non-profit that organizes challenges to stimulate research in machine learning.
 
-# News 
+# Project News 
 
 ## November 27, 2022: Project announcement
 
