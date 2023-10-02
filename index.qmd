@@ -1,4 +1,4 @@
-<center><a><img src="images/FAIRUniverse.png" alt="FAIR Universe title page logo" width="300px"/></a></center>
+<center><a><img src="images/FAIRUniverse.png" alt="FAIR Universe title page logo" width="600px"/></a></center>
 
 # Project Description
 
