@@ -1,6 +1,6 @@
 <center><a><img src="images/FAIRUniverse.png" alt="FAIR Universe title page logo" width="300px"/></a></center>
 
-The FAIR-Universe project is a collaboration between the [Lawrence Berkeley National Laboratory](https://www.lbl.gov/), [Université Paris-Saclay](https://www.universite-paris-saclay.fr/en), [University of Washington](https://www.washington.edu/), and [ChaLearn](https://chalearn.org/). The project is funded by the [Department of Energy](https://www.energy.gov/) through the [HEP-CCE](https://www.energy.gov/science/hep/hep-cce) program.
+The FAIR Universe project is a collaboration between the [Lawrence Berkeley National Laboratory](https://www.lbl.gov/), [Université Paris-Saclay](https://www.universite-paris-saclay.fr/en), [University of Washington](https://www.washington.edu/), and [ChaLearn](https://chalearn.org/). The project is funded by the [Department of Energy](https://www.energy.gov/) through the [HEP-CCE](https://www.energy.gov/science/hep/hep-cce) program.
 
 The collaboration is building a large-compute-scale AI platform for the hosting of large scientific datasets, models, and machine learning competitions to drive forward discoveries in high energy physics and cosmology. The initial focus is on discovering and minimizing systematic uncertainties in High Energy Physics through a sequence of challenges that will bring together researchers across physics and machine learning.
 
