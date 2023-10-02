@@ -21,11 +21,8 @@ output:
 
 ### Peter Nugent
 
-### Zarija Lukic
-
 ### Benjamin Thorne
 
-### Aishik Ghosh
 
 ### Chris Harris
 
@@ -52,3 +49,9 @@ output:
 ## ChaLearn
 
 ### Ihsan Ullah
+
+## UC Irvine
+
+### Daniel Whiteson
+
+### Aishik Ghosh
