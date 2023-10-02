@@ -13,4 +13,16 @@ output:
 
 ## LBNL
 
-## University of Washington
+### Wahid Bhimji 
+
+### Ben Nachman
+
+### Paolo Calafiura
+
+### Peter Nugent
+
+## Université Paris-Saclay
+
+### David Rousseau
+
+### Isabelle Guyon
