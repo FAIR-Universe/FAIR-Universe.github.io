@@ -5,3 +5,8 @@ description: |
 ---
 
 ## December 2022: FAIR Universe kick off workshop
+
+
+## November 2023: challange hackathon at Artificial Intelligence and the Uncertainty Challenge in Fundamental Physics
+
+We will be hosting a hackathon at the [Artificial Intelligence and the Uncertainty Challenge in Fundamental Physics](https://indico.cern.ch/event/1067246/) workshop. The hackathon will be held on the afternoon of Wednesday Novermber 29, 2023. Closer to the date we will be posting more information about the challenge problem and datasets, which will be hosted on [Codabench](https://www.codabench.org/). 
