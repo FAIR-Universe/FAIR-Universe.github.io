@@ -21,8 +21,34 @@ output:
 
 ### Peter Nugent
 
+### Zarija Lukic
+
+### Benjamin Thorne
+
+### Aishik Ghosh
+
+### Chris Harris
+
+### Sascha Diefenbacher
+
 ## Université Paris-Saclay
 
 ### David Rousseau
 
 ### Isabelle Guyon
+
+### Ragansu Chakkapai
+
+### Mathis Reymond
+
+## University of Washington
+
+### Shih-Chieh Hsu
+
+### Elham Khoda
+
+### Yuan Tang Chou
+
+## ChaLearn
+
+### Ihsan Ullah
