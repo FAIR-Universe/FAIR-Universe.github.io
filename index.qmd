@@ -24,7 +24,7 @@ We have designed and released our first toy challenge [on the Codabench platform
 
 ## November 29, 2023: Particle Physics challenge trial
 
-We will be hosting a hackathon at the [Artificial Intelligence and the Uncertainty Challenge in Fundamental Physics](https://indico.cern.ch/event/1067246/) workshop on Wednesday November 29, 2023. We are planning to release a tiral version of a challenge using detailed physics simulations of accelerator data. More information about the dataset and challenge will be released here closer to the date.
+We will be hosting a hackathon at the [Artificial Intelligence and the Uncertainty Challenge in Fundamental Physics](https://indico.in2p3.fr/event/30589/) workshop on Wednesday November 29, 2023. We are planning to release a tiral version of a challenge using detailed physics simulations of accelerator data. More information about the dataset and challenge will be released here closer to the date.
 
 <!-- Learn about our recent work: [Blog Posts](/about.qmd#blog) • [Presentations](/about.qmd#slides) • [Annual Reports](https://github.com/NASA-Openscapes/how_we_work) • [Flywheel Preprint](https://nasa-openscapes.github.io/about.html#flywheel-preprint) • [White Paper: The Value of Hosted JupyterHubs](https://nasa-openscapes.github.io/about.html#white-paper-value-of-hosted-jupyterhubs)  -->
 
