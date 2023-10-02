@@ -21,8 +21,6 @@ website:
       href: goals.qmd
     - text: "Team"
       href: team.qmd
-    - text: "Events"
-      href: events.qmd
     - icon: github
       href: https://github.com/FAIR-Universe
 
