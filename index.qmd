@@ -1,7 +1,4 @@
-<center><a><img src="images/LBL_Vert_547_rgb.jpg" alt="NASA logo to left of Openscapes logo" width="300px"/></a></center>
-
-<center><h1>FAIR Universe</h1></center>
-<br>
+<center><a><img src="images/FAIRUniverse.png" alt="FAIR Universe title page logo" width="300px"/></a></center>
 
 We are building a large-compute-scale AI platform for the hosting of large scientific datasets, models, and machine learning competitions to drive forward discoveries in high energy physics and cosmology. The initial focus is on discovering and minimizing systematic uncertainties in High Energy Physics through a sequence of challenges that will bring together researchers across physics and machine learning.
 

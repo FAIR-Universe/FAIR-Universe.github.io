@@ -10,7 +10,7 @@ website:
     left: "&copy; CC-By FAIR Universe"
  
   navbar:
-    logo: images/LBL_Vert_547_rgb.jpg
+    logo: images/FAIRUniverse_notext.png
     href: https://openscapes.org
     right:
     # - text: "Home"
