@@ -32,8 +32,6 @@ output:
 
 ### David Rousseau
 
-### Isabelle Guyon
-
 ### Ragansu Chakkapai
 
 ### Mathis Reymond
@@ -47,6 +45,8 @@ output:
 ### Yuan Tang Chou
 
 ## ChaLearn
+
+### Isabelle Guyon
 
 ### Ihsan Ullah
 
