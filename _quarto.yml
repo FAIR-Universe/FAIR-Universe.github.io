@@ -15,8 +15,6 @@ website:
     right:
     # - text: "Home"
     #   href: index.html
-    - text: "About"
-      href: about.qmd
     - text: "Goals"
       href: goals.qmd
     - text: "Team"
