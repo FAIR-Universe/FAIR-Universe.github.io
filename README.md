@@ -1,3 +1,3 @@
 # FAIR-Universe.github.io
 
-Landing page for FAIR Universe
+FAIR UNiverse project website
