@@ -1,0 +1,54 @@
+name: Build and Deploy Sphinx Documentation
+
+on:
+  push:
+    branches:
+      - master  # Trigger on pushes to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the main repository (if needed)
+    - name: FAIR-Universe.github.io 
+      uses: actions/checkout@v2
+
+    # Step 2: Checkout the other repository (containing the Sphinx source files)
+    - name: HEP-Challenge
+      uses: actions/checkout@v2
+      with:
+        repository: FAIR-Universe/HEP-Challenge # The Sphinx source repository
+        token: ${{ secrets.GITHUB_TOKEN }}  # Access token stored as a secret
+        path: HEP-Challenge # Checkout to a folder
+
+    # Step 3: Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Step 4: Install dependencies
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Make sure your Sphinx dependencies are in requirements.txt
+
+    # Step 5: Build the documentation using make html
+    - name: Build Sphinx Documentation
+      run: |
+        cd HEP-Challenge/docs
+        make html
+
+    # Step 6: Merge new HTML files with existing content
+    - name: Merge Content
+      run: |
+        mkdir -p existing-html
+        cp -r HEP-Challenge/docs/_build/html/* ./docs/
+
+    # Step 7: Deploy the documentation to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
