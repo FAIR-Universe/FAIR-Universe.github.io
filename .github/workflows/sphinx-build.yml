@@ -36,5 +36,5 @@ jobs:
 
     # Step 5: Build the documentation using make html
     - name: Build Sphinx Documentation
-      run: sphinx-build -b html HEP-Challenge/docs/ # Run the Makefile to build the HTML
+      run: sphinx-build -b html HEP-Challenge/docs/ docs/_build
 
