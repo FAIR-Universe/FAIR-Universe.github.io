@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: FAIR-Universe/HEP-Challenge # The Sphinx source repository
-        token: ${{ secrets.ACCESS_TOKEN }}  # Access token stored as a secret
+        token: ${{ secrets.GITHUB_TOKEN }}  # Access token stored as a secret
         path: HEP-Challenge/docs/  # Checkout to a folder
 
     # Step 3: Set up Python
