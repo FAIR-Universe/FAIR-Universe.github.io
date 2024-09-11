@@ -40,9 +40,15 @@ jobs:
         cd HEP-Challenge/docs
         make html
 
-    # Step 6: Deploy the documentation to GitHub Pages
+    # Step 6: Merge new HTML files with existing content
+    - name: Merge Content
+      run: |
+        mkdir -p existing-html
+        cp -r ./HEP-Challenge/docs/_build/html/* ./docs/
+
+    # Step 7: Deploy the documentation to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./HEP-Challenge/docs/_build/html
+        publish_dir: ./docs
