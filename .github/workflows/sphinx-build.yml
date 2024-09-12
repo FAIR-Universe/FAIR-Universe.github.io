@@ -47,10 +47,23 @@ jobs:
         cp -r HEP-Challenge/docs/_build/html/* ./docs/
         rm -rf HEP-Challenge
 
-    # Step 7: Deploy the documentation to GitHub Pages
-    - name: Deploy to GitHub Pages
+    # Step 7: Deploy the documentation to the sphinx-pages branch
+    - name: Deploy to sphinx-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
-        force_orphan: false
+        publish_dir: ./docs/_build/html  # Where Sphinx builds the HTML files
+        publish_branch: sphinx-pages  # Deploy documentation to the sphinx-pages branch
+        force_orphan: false  # No orphan branch this time, we want to keep history
+  
+      # Step 8 to merge sphinx-pages into another branch (e.g., `master`)
+    - name: Merge sphinx-pages into existing branch
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git checkout master  # Checkout the target branch for merge
+        git pull origin master  # Make sure we are up to date
+        git merge sphinx-pages  # Merge changes from the sphinx-pages branch
+        git push origin master  # Push the merged changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
