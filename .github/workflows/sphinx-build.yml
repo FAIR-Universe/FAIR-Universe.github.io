@@ -45,6 +45,11 @@ jobs:
       run: |
         mkdir -p existing-html
         cp -r HEP-Challenge/docs/_build/html/* ./docs/
+        rm -rf HEP-Challenge
+
+    - name: Branch from the main repository
+      run: |
+        git branch gh-pages
 
     # Step 7: Deploy the documentation to GitHub Pages
     - name: Deploy to GitHub Pages
