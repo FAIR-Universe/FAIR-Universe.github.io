@@ -45,10 +45,21 @@ jobs:
       run: |
         mkdir -p existing-html
         cp -r HEP-Challenge/docs/_build/html/* ./docs/
+        rm -rf HEP-Challenge
 
-    # Step 7: Deploy the documentation to GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+    # Step 7: Configure Git
+    - name: Configure Git
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+
+    # Step 8: Add and Commit Changes
+    - name: Commit built documentation
+      run: |
+        git add .
+        git commit -m "Auto-build Sphinx documentation"
+
+    # Step 9: Push Changes Back to Master
+    - name: Push changes to master
+      run: |
+        git push origin master
