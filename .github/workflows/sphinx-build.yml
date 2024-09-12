@@ -47,13 +47,10 @@ jobs:
         cp -r HEP-Challenge/docs/_build/html/* ./docs/
         rm -rf HEP-Challenge
 
-    - name: Branch from the main repository
-      run: |
-        git branch gh-pages
-
     # Step 7: Deploy the documentation to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
+        force_orphan: false
