@@ -4,11 +4,12 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ingestion_parallel module &mdash; FAIR Universe HEP Challenge 0.0.1 documentation</title>
+  <title>Ingestion_parallel module &mdash; FAIR Universe HEP Challenge 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
+    <link rel="shortcut icon" href="../_static/logo.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -21,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="systematics module" href="systematics.html" />
-    <link rel="prev" title="ingestion module" href="ingestion.html" /> 
+    <link rel="next" title="Systematics module" href="systematics.html" />
+    <link rel="prev" title="Ingestion module" href="ingestion.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,22 +53,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../pages/evaluation.html">Evaluation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/prizes.html">Prizes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/starting_kit.html">Starting Kit and Sample Submission</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/advanced_example.html">Example: Statistical-Only and 1-Systematic Case Analysis</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">HEP-Challenge</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Core modules</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ingestion_program.html">Ingestion Program</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="datasets.html">datasets module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="derived_quantities.html">derived_quantities module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ingestion.html">ingestion module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ingestion_parallel module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html">Datasets module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="derived_quantities.html">Derived_quantities module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingestion.html">Ingestion module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ingestion_parallel module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ingestion_parallel.Ingestion"><code class="docutils literal notranslate"><span class="pre">Ingestion</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="systematics.html">systematics module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="visualization.html">visualization module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systematics.html">Systematics module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization.html">Visualization module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="sample_code_submission.html">Sample Code Submission</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scoring_program.html">scoring_program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scoring_program.html">Scoring Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_one_syst_model.html">Simple One Syst Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_stat_only_model.html">Simple Stat Only Model</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/terms.html">Terms and Conditions</a></li>
@@ -87,9 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">HEP-Challenge</a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Core modules</a></li>
           <li class="breadcrumb-item"><a href="ingestion_program.html">Ingestion Program</a></li>
-      <li class="breadcrumb-item active">ingestion_parallel module</li>
+      <li class="breadcrumb-item active">Ingestion_parallel module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst_source/ingestion_parallel.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -100,7 +101,7 @@
            <div itemprop="articleBody">
              
   <section id="module-ingestion_parallel">
-<span id="ingestion-parallel-module"></span><h1>ingestion_parallel module<a class="headerlink" href="#module-ingestion_parallel" title="Link to this heading"></a></h1>
+<span id="ingestion-parallel-module"></span><h1>Ingestion_parallel module<a class="headerlink" href="#module-ingestion_parallel" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ingestion_parallel.Ingestion">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ingestion_parallel.</span></span><span class="sig-name descname"><span class="pre">Ingestion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ingestion_parallel.Ingestion" title="Link to this definition"></a></dt>
@@ -222,8 +223,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ingestion.html" class="btn btn-neutral float-left" title="ingestion module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="systematics.html" class="btn btn-neutral float-right" title="systematics module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ingestion.html" class="btn btn-neutral float-left" title="Ingestion module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="systematics.html" class="btn btn-neutral float-right" title="Systematics module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,11 +4,12 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example: Statistical-Only and 1-Systematic Case Analysis &mdash; FAIR Universe HEP Challenge 0.0.1 documentation</title>
+  <title>Simple One Syst Model &mdash; FAIR Universe HEP Challenge 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
+    <link rel="shortcut icon" href="../_static/logo.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -23,8 +24,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="HEP-Challenge" href="../rst_source/modules.html" />
-    <link rel="prev" title="Starting Kit and Sample Submission" href="starting_kit.html" /> 
+    <link rel="next" title="Boosted_Becision_Tree module" href="boosted_decision_tree.html" />
+    <link rel="prev" title="Score module" href="score.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,36 +50,33 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evaluation.html">Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="prizes.html">Prizes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="starting_kit.html">Starting Kit and Sample Submission</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Example: Statistical-Only and 1-Systematic Case Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#problem-overview">Problem Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-breakdown">Example Breakdown</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#machine-learning">1. <strong>Machine Learning</strong>:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#statistical-analysis">2. <strong>Statistical Analysis</strong>:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/data.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/prizes.html">Prizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/starting_kit.html">Starting Kit and Sample Submission</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Core modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ingestion_program.html">Ingestion Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scoring_program.html">Scoring Program</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Simple One Syst Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-statistical-only-and-1-systematic-case-analysis">Example: Statistical-Only and 1-Systematic Case Analysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#problem-overview">Problem Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-breakdown">Example Breakdown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#workflow-overview">Workflow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#machine-learning-classifier-training">Machine Learning: Classifier Training</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statistical-analysis-signal-strength-extraction">Statistical Analysis: Signal Strength Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-run-it">How to run it</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#workflow-overview">Workflow Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#steps">Steps:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boosted_decision_tree.html">Boosted_Becision_Tree module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model_one_syst.html">Model One Syst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statistical_analysis.html">Statistical_Analysis module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#machine-learning-classifier-training">Machine Learning: Classifier Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#key-details">Key Details:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_stat_only_model.html">Simple Stat Only Model</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#statistical-analysis-signal-strength-extraction">Statistical Analysis: Signal Strength Extraction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#building-templates">1. <strong>Building Templates</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fitting-procedure">2. <strong>Fitting Procedure</strong></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-run-it">How to run it</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_source/modules.html">HEP-Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terms.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/terms.html">Terms and Conditions</a></li>
 </ul>
 
         </div>
@@ -95,9 +93,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Example: Statistical-Only and 1-Systematic Case Analysis</li>
+          <li class="breadcrumb-item"><a href="modules.html">Core modules</a></li>
+      <li class="breadcrumb-item active">Simple One Syst Model</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/pages/advanced_example.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/rst_source/simple_one_syst_model.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -105,11 +104,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="example-statistical-only-and-1-systematic-case-analysis">
-<h1>Example: Statistical-Only and 1-Systematic Case Analysis<a class="headerlink" href="#example-statistical-only-and-1-systematic-case-analysis" title="Link to this heading"></a></h1>
+  <section id="simple-one-syst-model">
+<h1>Simple One Syst Model<a class="headerlink" href="#simple-one-syst-model" title="Link to this heading"></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="example-statistical-only-and-1-systematic-case-analysis">
+<h2>Example: Statistical-Only and 1-Systematic Case Analysis<a class="headerlink" href="#example-statistical-only-and-1-systematic-case-analysis" title="Link to this heading"></a></h2>
 <p>This example demonstrates how to obtain results both with and without systematic uncertainties in a statistical analysis. It is divided into two parts: <strong>Machine Learning</strong> and <strong>Statistical Analysis</strong>.</p>
 <section id="problem-overview">
-<h2>Problem Overview<a class="headerlink" href="#problem-overview" title="Link to this heading"></a></h2>
+<h3>Problem Overview<a class="headerlink" href="#problem-overview" title="Link to this heading"></a></h3>
 <p>Six systematic uncertainties are parametrized by nuisance parameters (NPs). The NPs and their corresponding uncertainties are:</p>
 <ul class="simple">
 <li><p><strong>Tau Energy Scale</strong> (<code class="docutils literal notranslate"><span class="pre">tes</span></code>)</p></li>
@@ -128,10 +129,10 @@
 </section>
 <hr class="docutils" />
 <section id="example-breakdown">
-<h2>Example Breakdown<a class="headerlink" href="#example-breakdown" title="Link to this heading"></a></h2>
+<h3>Example Breakdown<a class="headerlink" href="#example-breakdown" title="Link to this heading"></a></h3>
 <p>The process is split into two main sections:</p>
 <section id="machine-learning">
-<h3>1. <strong>Machine Learning</strong>:<a class="headerlink" href="#machine-learning" title="Link to this heading"></a></h3>
+<h4>1. <strong>Machine Learning</strong>:<a class="headerlink" href="#machine-learning" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>Files</strong>:</p>
 <ul>
@@ -143,7 +144,7 @@
 </ul>
 </section>
 <section id="statistical-analysis">
-<h3>2. <strong>Statistical Analysis</strong>:<a class="headerlink" href="#statistical-analysis" title="Link to this heading"></a></h3>
+<h4>2. <strong>Statistical Analysis</strong>:<a class="headerlink" href="#statistical-analysis" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>File</strong>: <a class="reference external" href="https://github.com/FAIR-Universe/HEP-Challenge/blob/master/simple_one_syst_model/statistical_analysis.py"><code class="docutils literal notranslate"><span class="pre">statistical_analysis.py</span></code></a></p></li>
 <li><p>Objective: Use the classifier output to extract the signal strength through statistical analysis.</p></li>
@@ -156,10 +157,10 @@
 </section>
 <hr class="docutils" />
 <section id="workflow-overview">
-<h2>Workflow Overview<a class="headerlink" href="#workflow-overview" title="Link to this heading"></a></h2>
+<h3>Workflow Overview<a class="headerlink" href="#workflow-overview" title="Link to this heading"></a></h3>
 <p>Because training a classifier on all systematic variations is impractical, this workflow suggests training on the <strong>nominal dataset</strong> and using that trained classifier to analyze systematic variations. This is feasible for low-dimensional cases (i.e., 1 or 2 systematics). Here’s how it works:</p>
 <section id="steps">
-<h3>Steps:<a class="headerlink" href="#steps" title="Link to this heading"></a></h3>
+<h4>Steps:<a class="headerlink" href="#steps" title="Link to this heading"></a></h4>
 <ol class="arabic simple">
 <li><p><strong>Train the Classifier</strong>: Train on the nominal dataset.</p></li>
 <li><p><strong>Set Binning</strong>: Define binning for the classifier output.</p></li>
@@ -174,13 +175,13 @@
 </section>
 <hr class="docutils" />
 <section id="machine-learning-classifier-training">
-<h2>Machine Learning: Classifier Training<a class="headerlink" href="#machine-learning-classifier-training" title="Link to this heading"></a></h2>
+<h3>Machine Learning: Classifier Training<a class="headerlink" href="#machine-learning-classifier-training" title="Link to this heading"></a></h3>
 <p>The machine learning task involves using <strong>XGBoost</strong> to distinguish between signal and background events. Below is the setup for the <strong>XGBClassifier</strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
 
 <span class="c1"># Training setup</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span>
-    <span class="n">n_estimators</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> 
+    <span class="n">n_estimators</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
     <span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
     <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
     <span class="n">eval_metric</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">,</span> <span class="s2">&quot;logloss&quot;</span><span class="p">,</span> <span class="s2">&quot;rmse&quot;</span><span class="p">],</span>
@@ -195,7 +196,7 @@
 </pre></div>
 </div>
 <section id="key-details">
-<h3>Key Details:<a class="headerlink" href="#key-details" title="Link to this heading"></a></h3>
+<h4>Key Details:<a class="headerlink" href="#key-details" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p>A <code class="docutils literal notranslate"><span class="pre">StandardScaler</span></code> is used to normalize features before training. The same scaler should be applied to the test data during prediction.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">early_stopping_rounds</span></code> halts training if validation performance doesn’t improve.</p></li>
@@ -209,14 +210,14 @@
 </section>
 <hr class="docutils" />
 <section id="statistical-analysis-signal-strength-extraction">
-<h2>Statistical Analysis: Signal Strength Extraction<a class="headerlink" href="#statistical-analysis-signal-strength-extraction" title="Link to this heading"></a></h2>
+<h3>Statistical Analysis: Signal Strength Extraction<a class="headerlink" href="#statistical-analysis-signal-strength-extraction" title="Link to this heading"></a></h3>
 <p>This part deals with extracting the signal strength while accounting for systematic uncertainties.</p>
 <section id="building-templates">
-<h3>1. <strong>Building Templates</strong><a class="headerlink" href="#building-templates" title="Link to this heading"></a></h3>
+<h4>1. <strong>Building Templates</strong><a class="headerlink" href="#building-templates" title="Link to this heading"></a></h4>
 <p>The templates for each systematic are built using the function <code class="docutils literal notranslate"><span class="pre">calculate_saved_info(self,</span> <span class="pre">holdout_set,</span> <span class="pre">file_path)</span></code>.</p>
 </section>
 <section id="fitting-procedure">
-<h3>2. <strong>Fitting Procedure</strong><a class="headerlink" href="#fitting-procedure" title="Link to this heading"></a></h3>
+<h4>2. <strong>Fitting Procedure</strong><a class="headerlink" href="#fitting-procedure" title="Link to this heading"></a></h4>
 <ol class="arabic simple">
 <li><p><strong>Load Templates</strong>: Load pre-built templates (e.g., <code class="docutils literal notranslate"><span class="pre">tes.pkl</span></code>) or generate them with <code class="docutils literal notranslate"><span class="pre">calculate_saved_info()</span></code> if missing.</p></li>
 <li><p><strong>Polynomial Coefficients</strong>: Retrieve coefficients for polynomial fits from <code class="docutils literal notranslate"><span class="pre">alpha_function()</span></code>.</p></li>
@@ -234,32 +235,41 @@
 </section>
 <hr class="docutils" />
 <section id="how-to-run-it">
-<h2>How to run it<a class="headerlink" href="#how-to-run-it" title="Link to this heading"></a></h2>
+<h3>How to run it<a class="headerlink" href="#how-to-run-it" title="Link to this heading"></a></h3>
 <p>The model fits one systematics at a time hence we need to decide which one it would be beforehand with <code class="docutils literal notranslate"><span class="pre">MODEL_SYST_NAME</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">MODEL_SYST_NAME</span><span class="o">=</span><span class="s2">&quot;jes&quot;</span><span class="w"> </span><span class="c1"># if you want to fit the Jet Energy Scale systematics</span>
 
-python3<span class="w"> </span>HEP-Challenge/run_ingestion.py<span class="w"> </span><span class="se">\ </span>
---use-random-mus<span class="w"> </span><span class="se">\ </span>
---systematics-tes<span class="w"> </span><span class="se">\ </span>
---systematics-soft-met<span class="w"> </span><span class="se">\ </span>
---systematics-jes<span class="w"> </span><span class="se">\ </span>
---systematics-ttbar-scale<span class="w"> </span><span class="se">\ </span>
---systematics-diboson-scale<span class="w"> </span><span class="se">\ </span>
+python3<span class="w"> </span>HEP-Challenge/run_ingestion.py<span class="w"> </span><span class="se">\</span>
+--use-random-mus<span class="w"> </span><span class="se">\</span>
+--systematics-tes<span class="w"> </span><span class="se">\</span>
+--systematics-soft-met<span class="w"> </span><span class="se">\</span>
+--systematics-jes<span class="w"> </span><span class="se">\</span>
+--systematics-ttbar-scale<span class="w"> </span><span class="se">\</span>
+--systematics-diboson-scale<span class="w"> </span><span class="se">\</span>
 --systematics-bkg-scale<span class="w"> </span><span class="se">\</span>
---num-pseudo-experiments<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="se">\ </span>
---num-of-sets<span class="w"> </span><span class="m">1</span><span class="w"> </span>
+--num-pseudo-experiments<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="se">\</span>
+--num-of-sets<span class="w"> </span><span class="m">1</span>
 --submission<span class="w"> </span>HEP-Challenge/simple_one_syst_model
 </pre></div>
 </div>
 </section>
+</section>
+<p>The following is the structure of the folder:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="boosted_decision_tree.html">Boosted_Becision_Tree module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_one_syst.html">Model One Syst</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical_analysis.html">Statistical_Analysis module</a></li>
+</ul>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="starting_kit.html" class="btn btn-neutral float-left" title="Starting Kit and Sample Submission" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../rst_source/modules.html" class="btn btn-neutral float-right" title="HEP-Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="score.html" class="btn btn-neutral float-left" title="Score module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="boosted_decision_tree.html" class="btn btn-neutral float-right" title="Boosted_Becision_Tree module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

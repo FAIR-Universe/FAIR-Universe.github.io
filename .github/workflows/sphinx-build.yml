@@ -37,7 +37,12 @@ jobs:
     # Step 5: Build the documentation using make html
     - name: Build Sphinx Documentation
       run: |
-        cd HEP-Challenge/docs
+        cd HEP-Challenge
+        mkdir -p docs
+        cp -r ../docs/* docs/
+        mkdir -p docs/pages
+        cp pages/* docs/pages/
+        cd docs
         make html
 
     # Step 6: Merge new HTML files with existing content
