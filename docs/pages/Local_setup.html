@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; FAIR Universe HEP Challenge 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Overview" href="overview.html" />
+    <link rel="prev" title="Welcome to FAIR Universe HEP Challenge’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            FAIR Universe HEP Challenge
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Pages:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#with-conda">With Conda :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#with-docker">With Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#note">⚠️ Note:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">Evaluation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Core Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/ingestion_program.html">Ingestion Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/scoring_program.html">Scoring Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/simple_one_syst_model.html">Simple One Syst Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/simple_stat_only_model.html">Simple Stat Only Model</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FAIR Universe HEP Challenge</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/Local_setup.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<p>To get started with in a local Machine you need to first clone our github repository.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>https://github.com/FAIR-Universe/HEP-Challenge.git
+</pre></div>
+</div>
+<p>To get the right dependencies you could use different strategies depending on your local machine.</p>
+<section id="with-conda">
+<h2>With Conda :<a class="headerlink" href="#with-conda" title="Link to this heading"></a></h2>
+<p>If you are running this starting kit locally, you may want to use a dedicated conda env.<br />
+<a class="reference external" href="https://github.com/FAIR-Universe/HEP-Challenge/tree/master/conda">Instructions to setup a conda env</a></p>
+</section>
+<section id="with-docker">
+<h2>With Docker<a class="headerlink" href="#with-docker" title="Link to this heading"></a></h2>
+<p>The main advantage of using docker is that you dont have to worry about dependencies since a good docker container generally has all the dependencies.</p>
+<ul class="simple">
+<li><p>Step 1. Check if have docker <strong>if not</strong> install docker
+Instalation process can be found in <a class="reference external" href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a></p></li>
+<li><p>Step 2. Pull the right version of docker image</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>docker.io/nersc/fair_universe:1298f0a8
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Step 3. Start a shell within the container to run the challenge. Assuming that <source> is the path to your source checkout on your host machine, the following command will make the source directory available as /HEP-Challenge in the container and start an interactive bash shell</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--volume<span class="o">=</span>&lt;source&gt;:/HEP-Challenge<span class="w"> </span>--interactive<span class="w"> </span><span class="se">\ </span>
+--tty<span class="w"> </span>docker.io/nersc/fair_universe:1298f0a8<span class="w"> </span>/bin/bash
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Step 4. Start the notebook, The next command will give you a link which can copy to your browser and run the notebook</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>StartingKit_HiggsML_Uncertainty_Challenge.ipynb<span class="w"> </span>--no-browser
+</pre></div>
+</div>
+<section id="note">
+<h3>⚠️ Note:<a class="headerlink" href="#note" title="Link to this heading"></a></h3>
+<p>If you are running this starting kit on MAC OS, you may want to check and install <code class="docutils literal notranslate"><span class="pre">libomp</span></code> package.
+This package is needed to run xgboost model. Follow the steps below for complete installations.</p>
+<p>If still you are facing problems with XGBoost, you can uninstall the current xgboost and install py-xgboost in your environment</p>
+<p>Uninstall XGBoost</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">xgboost</span>
+</pre></div>
+</div>
+<p>Install py-xgboost using conda</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">py</span><span class="o">-</span><span class="n">xgboost</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to FAIR Universe HEP Challenge’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, FAIR-Universe Collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAIR Universe - HiggsML Uncertainty Challenge &mdash; FAIR Universe HEP Challenge 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            FAIR Universe HEP Challenge
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Pages:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Local_setup.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">Evaluation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Core Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/ingestion_program.html">Ingestion Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/scoring_program.html">Scoring Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/simple_one_syst_model.html">Simple One Syst Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_source/simple_stat_only_model.html">Simple Stat Only Model</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FAIR Universe HEP Challenge</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FAIR Universe - HiggsML Uncertainty Challenge</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/Front_page.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="fair-universe-higgsml-uncertainty-challenge">
+<h1>FAIR Universe - HiggsML Uncertainty Challenge<a class="headerlink" href="#fair-universe-higgsml-uncertainty-challenge" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This NeurIPS 2024 Machine Learning competition is one of the first to strongly emphasise mastering uncertainties in the input training dataset and outputting credible confidence intervals. This challenge explores uncertainty-aware AI techniques for High Energy Physics (HEP).</p>
+<p>The context is the measurement of the Higgs Boson signal like in <a class="reference external" href="https://www.kaggle.com/c/higgs-boson">HiggsML challenge on Kaggle</a> in 2014. Participants should design an advanced analysis technique that can not only measure the signal strength but also provide a confidence interval.</p>
+<p>The confidence interval should include statistical and systematic uncertainties (concerning detector calibration, background levels, etc…). It is expected that advanced analysis techniques that can control the impact of systematics will perform best. This challenge presents an opportunity to push the boundaries of machine learning applications within physics while still focusing on essential ML skills like robust model development and uncertainty quantification.</p>
+<hr class="docutils" />
+<p>There are several information sources regarding the FAIR Universe - HiggsML Uncertainty Challenge:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.codabench.org/competitions/2977/">Codabench</a>: This serves as the platform to submit entries to the competition. It hosts the public <a class="reference external" href="https://www.codabench.org/datasets/download/b9e59d0a-4db3-4da4-b1f8-3f609d1835b2/">training data</a>.</p></li>
+<li><p><a class="reference external" href="https://fair-universe.lbl.gov/tutorials/Higgs_Uncertainty_Challenge-Codabench_Tutorial.pdf">Tutorial Slides</a> : These slides will help you register and submit a sample dummy submission.</p></li>
+<li><p><a class="reference external" href="https://fair-universe.lbl.gov/docs/">Documentation</a>: This contains detailed information about the <a class="reference external" href="https://fair-universe.lbl.gov/docs/pages/overview.html#problem-setting">science behind the challenge</a>, the <a class="reference external" href="https://fair-universe.lbl.gov/docs/pages/data.html">specifics of the data</a>, and <a class="reference external" href="https://fair-universe.lbl.gov/docs/rst_source/modules.html">documents the code</a> used to facilitate the evaluation of the competition. It also describes the <a class="reference external" href="https://fair-universe.lbl.gov/docs/pages/evaluation.html">evaluation metric</a></p></li>
+<li><p><a class="reference external" href="https://github.com/FAIR-Universe/HEP-Challenge/tree/master/">Github Repo</a>: This hosts the code for testing submissions, as well as the <a class="reference external" href="https://github.com/FAIR-Universe/HEP-Challenge/blob/master/StartingKit_HiggsML_Uncertainty_Challenge.ipynb">starting kit notebook</a>. The starting kit is also available on <a class="reference external" href="https://colab.research.google.com/github/FAIR-Universe/HEP-Challenge/blob/master/StartingKit_HiggsML_Uncertainty_Challenge.ipynb">Google Colab</a></p></li>
+<li><p>White Paper(coming soon): This serves as a full breakdown of the competition in detail</p></li>
+</ul>
+</section>
+<section id="how-to-join-this-challenge">
+<h2>How to join this challenge?<a class="headerlink" href="#how-to-join-this-challenge" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Go to the “Starting Kit” tab</p></li>
+<li><p>Download the “Dummy sample submission” or “sample submission”</p></li>
+<li><p>Go to the “My Submissions” tab</p></li>
+<li><p>Submit the downloaded file</p></li>
+</ul>
+<p>This competition allows code submissions. Participants are strongly encouraged to submit code with a pre-trained model, rather than retraining within the execution to allow evaluation within the resources available.</p>
+</section>
+<hr class="docutils" />
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Link to this heading"></a></h2>
+<section id="lawrence-berkeley-national-laboratory">
+<h3>Lawrence Berkeley National Laboratory<a class="headerlink" href="#lawrence-berkeley-national-laboratory" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Benjamin Nachman</p></li>
+<li><p>Chris Harris</p></li>
+<li><p>Sascha Diefenbacher</p></li>
+<li><p>Steven Farrell</p></li>
+<li><p>Wahid Bhimji</p></li>
+<li><p>Jordan Dudley</p></li>
+</ul>
+</section>
+<section id="university-of-washington">
+<h3>University of Washington<a class="headerlink" href="#university-of-washington" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Elham E Khoda</p></li>
+<li><p>Shih-Chieh Hsu</p></li>
+<li><p>Yulei Zhang</p></li>
+<li><p>Yaun-Tang Chou</p></li>
+</ul>
+</section>
+<section id="chalearn">
+<h3>ChaLearn<a class="headerlink" href="#chalearn" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Isabelle Guyon</p></li>
+<li><p>Ihsan Ullah</p></li>
+</ul>
+</section>
+<section id="universite-paris-saclay">
+<h3>Université Paris-Saclay<a class="headerlink" href="#universite-paris-saclay" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>David Rousseau</p></li>
+<li><p>Ragansu Chakkappai</p></li>
+</ul>
+</section>
+<section id="uc-irvine">
+<h3>UC Irvine<a class="headerlink" href="#uc-irvine" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Aishik Ghosh</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Link to this heading"></a></h2>
+<p>Visit our website: https://fair-universe.lbl.gov/</p>
+<p>Email: fair-universe&#64;lbl.gov</p>
+<p>Updates will be announced through fair-universe-announcements google group. <a class="reference external" href="https://groups.google.com/u/0/a/lbl.gov/g/Fair-Universe-Announcements/">Click to join Google Group</a></p>
+<p>Join <strong>#higgsml-uncertainty-challenge</strong> channel in <a class="reference external" href="https://join.slack.com/t/fairuniverse/shared_invite/zt-2dt9ovrp1-jvi0DnCK9jzL3VGrdwYNMA">FAIR Universe slack workspace</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, FAIR-Universe Collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
