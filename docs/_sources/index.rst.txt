@@ -27,7 +27,7 @@ There are several information sources regarding the FAIR Universe - HiggsML Unce
 
 * `Github Repo <https://github.com/FAIR-Universe/HEP-Challenge/tree/master/>`_ : This hosts the code for testing submissions, as well as the `starting kit notebook <https://github.com/FAIR-Universe/HEP-Challenge/blob/master/StartingKit_HiggsML_Uncertainty_Challenge.ipynb>`_. The starting kit is also available on `Google Colab <https://colab.research.google.com/github/FAIR-Universe/HEP-Challenge/blob/master/StartingKit_HiggsML_Uncertainty_Challenge.ipynb>`_.
 
-* `White Paper <https://fair-universe.lbl.gov/tutorials/Higgs_Uncertainty_Challenge_whitepaper.pdf>`_ : (coming soon): This serves as a full breakdown of the competition in detail.
+* `White Paper <https://fair-universe.lbl.gov/files/Higgs_Uncertainty_Challenge_whitepaper.pdf>`_ : This serves as a full breakdown of the competition in detail.
 
 
 |
