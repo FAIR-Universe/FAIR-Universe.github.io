@@ -10,7 +10,6 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
-
   
     <link rel="shortcut icon" href="../_static/logo.png"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -57,6 +56,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#constructing-the-interval">Constructing the Interval</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#submission-requirements">Submission requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-description">Hardware description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scoring">Scoring</a></li>
 </ul>
 </li>
@@ -106,6 +107,19 @@
 <p><strong>Methods that return a likelihood function</strong>: Calculate the central Interval containing 68.27% of the total probability mass using numerical integration</p>
 <p><strong>Methods that a central value and Gaussian uncertainty</strong>: Define <span class="math notranslate nohighlight">\(\hat \mu_{16} = \hat \mu - \Delta \hat \mu\)</span> and <span class="math notranslate nohighlight">\(\hat \mu_{84} = \hat \mu + \Delta \hat \mu\)</span>. If the underlying assumption of a symmetrical uncertainty made by the Gaussian uncertainty is given, this should contain 68.27% of the probability, since the 1 standard deviation region of a Gaussian distribution contains 68.27% of the probability mass.</p>
 </section>
+</section>
+<section id="submission-requirements">
+<h2>Submission requirements<a class="headerlink" href="#submission-requirements" title="Link to this heading"></a></h2>
+<p>Participants’ submissions must consist of a zip file containing a <code class="docutils literal notranslate"><span class="pre">model.py</span></code> file (which must not be inside a directory), and it can contain any other necessary files (eg, a pre-trained model). The <code class="docutils literal notranslate"><span class="pre">model.py</span></code> file must define a <code class="docutils literal notranslate"><span class="pre">Model</span></code> class which must satisfy the following criteria.</p>
+<ol class="arabic simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Model</span></code> class must accept two arguments, <code class="docutils literal notranslate"><span class="pre">get_train_set</span></code> and <code class="docutils literal notranslate"><span class="pre">systematics</span></code>, when it is initialized. The <code class="docutils literal notranslate"><span class="pre">get_train_set</span></code> argument will receive a callable which, when called, will return the public dataset. The <code class="docutils literal notranslate"><span class="pre">systematics</span></code> argument will receive a callable which can be used to apply the systematic effects (adjusting weights and primary features, computing derived features, and applying post-selection cuts) to a dataset.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Model</span></code> class must have a <code class="docutils literal notranslate"><span class="pre">fit</span></code> method, which will be called once when the submission is being evaluated. This method can be used prepare the model for inference. We encourage participants to submit models which have already been trained, as there is limited compute time for each submission to be evaluated.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Model</span></code> class must have a <code class="docutils literal notranslate"><span class="pre">predict</span></code> method which must accept a test dataset and return the results as a dictionary containing four items: <code class="docutils literal notranslate"><span class="pre">”mu_hat”</span></code>: the predicted value of mu, <code class="docutils literal notranslate"><span class="pre">”delta_mu_hat”</span></code>: the uncertainty in the predicted value of mu, <code class="docutils literal notranslate"><span class="pre">”p16”</span></code>: the lower bound of the 16th percentile of mu, and <code class="docutils literal notranslate"><span class="pre">”p84”</span></code>: the upper bound of the 84th percentile of mu.</p></li>
+</ol>
+</section>
+<section id="hardware-description">
+<h2>Hardware description<a class="headerlink" href="#hardware-description" title="Link to this heading"></a></h2>
+<p>Throughout the competition, participants’ submissions will be run on either the Perlmutter supercomputer at NERSC or an alternative workstation at LBNL, but they will only be run on Perlmutter for the final evaluation. When running on Perlmutter, submissions will have one node assigned, which consists of 1 AMD EPYC 7763 CPU, 256GB of RAM, and 4 NVIDIA A100 GPUs with 40GB of memory each (https://docs.nersc.gov/systems/perlmutter/architecture/#gpu-nodes). The alternative workstation consists of 1 Intel(R) Xeon(R) Gold 6148 CPU, 376GB of RAM, and 3 Tesla V100-SXM2-16GB GPUs available. On either system, participants’ submissions will be allotted 2 hours to complete evaluation on all of the pseudoexperiments  (10 sets of 100 pseudoexperiments each for the initial phase, and 10 sets of 1000 pseudoexperiments for the final phase). These pseudoexperiments will be parallelized in the following way. Each participants’ <code class="docutils literal notranslate"><span class="pre">Model.fit()</span></code> will be run once, and then each of the pseudoexperiments will be run by one of many parallel workers, with each worker calling <code class="docutils literal notranslate"><span class="pre">Model.predict()</span></code> once. There will be 30 parallel workers when running on Perlmutter. This will be reduced to 10 parallel workers when running on the alternative workstation.</p>
 </section>
 <section id="scoring">
 <h2>Scoring<a class="headerlink" href="#scoring" title="Link to this heading"></a></h2>
