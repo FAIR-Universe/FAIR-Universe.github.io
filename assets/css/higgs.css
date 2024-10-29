@@ -1,0 +1,88 @@
+.hero {
+  background-image: url('../img/galaxy-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.hero h1 {
+  position: relative;
+  font-size: 3em;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.section-body{
+  margin-left: 10% !important;
+}
+.section-body ul{
+  margin-left: 5% !important;
+  width: 80%;
+  text-align: left;
+}
+
+.workshop-schedule .schedule-item {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.workshop-schedule .time {
+padding: 8px 12px;
+border-radius: 5px;
+font-weight: bold;
+color: #2a2a2a; 
+margin-right: 10px;
+min-width: 150px;
+text-align: center;
+}
+
+.workshop-schedule .details {
+color: #333;
+}
+
+.color1 {
+background-color: #b8e9ff;
+}
+
+.color2 {
+background-color: #b8ffda;
+}
+
+.color3 {
+background-color: #ffe9b8;
+}
+
+.color4{
+background-color: #dcdcdc;
+}
+
+.color5 {
+background-color: #ffc2e2;
+}
+
+.color6 {
+background-color: #dab8ff;
+}
+
+.color7 {
+background-color: #fff4b8;
+}
+
+.color8 {
+background-color: #b8fff2;
+}
