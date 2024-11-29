@@ -36,53 +36,74 @@
 }
 
 .workshop-schedule .schedule-item {
-display: flex;
-align-items: center;
-margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  margin-bottom: 15px;
 }
 
 .workshop-schedule .time {
-padding: 8px 12px;
-border-radius: 5px;
-font-weight: bold;
-color: #2a2a2a; 
-margin-right: 10px;
-min-width: 150px;
-text-align: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #2a2a2a; 
+  margin-right: 10px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.workshop-schedule .details-speaker {
+  display: flex;
+  flex-direction: column;
 }
 
 .workshop-schedule .details {
-color: #333;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
+.workshop-schedule .speaker {
+  color: #333;
+  font-style: italic;
+}
+
+
 .color1 {
-background-color: #b8e9ff;
+  background-color: #b8e9ff;
 }
 
 .color2 {
-background-color: #b8ffda;
+  background-color: #b8ffda;
 }
 
 .color3 {
-background-color: #ffe9b8;
+  background-color: #ffe9b8;
 }
 
-.color4{
-background-color: #dcdcdc;
+.color4 {
+  background-color: #dab8ff;
 }
 
 .color5 {
-background-color: #ffc2e2;
+  background-color: #dcdcdc;
 }
 
 .color6 {
-background-color: #dab8ff;
+  background-color: #ffc2e2;
 }
 
 .color7 {
-background-color: #fff4b8;
+  background-color: #fff4b8;
 }
 
 .color8 {
-background-color: #b8fff2;
+  background-color: #b8fff2;
+}
+
+.color9 {
+  background-color: #b8c9ff;
+}
+
+.color10 {
+  background-color: #ffddb8;
 }
