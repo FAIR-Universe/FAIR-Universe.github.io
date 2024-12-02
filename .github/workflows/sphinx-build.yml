@@ -62,6 +62,10 @@ jobs:
     - name: Commit built documentation
       run: |
         git add .
+        if git diff-index --quiet HEAD; then
+          echo "No changes to commit."
+          exit 0
+        fi
         git commit -m "Auto-build Sphinx documentation"
 
     # Step 9: Push Changes Back to Master
