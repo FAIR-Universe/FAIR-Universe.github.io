@@ -1282,6 +1282,40 @@ section {
   background-color: #01233d;
 }
 
+.bg-codabench{
+  background-color: #2d3f4d;
+}
+.bg-arxiv{
+  background-color: #b31a1a;
+}
+.bg-zenodo{
+  background-color: #0249aa;
+}
+.bg-winners{
+  background-color: #a7943d;
+}
+
+.bg-codabench:hover {
+  background-color: #0f151b;
+  color: white;
+}
+
+.bg-arxiv:hover {
+  background-color: #600f0f;
+  color: white;
+}
+
+.bg-zenodo:hover {
+  background-color: #022d69;
+  color: white;
+}
+
+.bg-winners:hover {
+  background-color: #6e6025;
+  color: white;
+}
+
+
 .btn-back{
   margin-top: 10px;
   margin-left: 10px;
