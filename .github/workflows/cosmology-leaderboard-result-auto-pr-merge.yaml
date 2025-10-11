@@ -1,9 +1,9 @@
-name: Auto PR and Merge for Result Branches
+name: Auto PR and Merge for `cosmology-leaderboard-update-*` branch
 
 on:
   push:
     branches:
-      - 'auto-results-*'  # Trigger on branches that start with auto-results-
+      - 'cosmology-leaderboard-update-*'  # Trigger on branches that start with cosmology-leaderboard-update-
 
 permissions:
   contents: write
@@ -36,11 +36,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
           merge-method: squash
-
-      - name: Auto-merge PR (alternative approach)
-        if: steps.create_pr.outputs.pull-request-number != ''
-        uses: pascalgn/automerge-action@v0.16.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MERGE_METHOD: squash
-          PULL_REQUEST: ${{ steps.create_pr.outputs.pull-request-number }}
