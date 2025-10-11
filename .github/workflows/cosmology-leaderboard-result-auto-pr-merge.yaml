@@ -38,11 +38,11 @@ jobs:
             echo "[-] No PR found for $BRANCH"
           fi
         
-      # - name: Delete branch after merge
-      #   if: success()
-      #   run: |
-      #     BRANCH="${GITHUB_REF_NAME}"
-      #     echo "[*] Deleting branch $BRANCH"
-      #     gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${BRANCH}" \
-      #       && echo "[+] Deleted branch $BRANCH" \
-      #       || echo "[-] Failed to delete branch $BRANCH"
+      - name: Delete branch after merge
+        if: success()
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          echo "[*] Deleting branch $BRANCH"
+          gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${BRANCH}" \
+            && echo "[+] Deleted branch $BRANCH" \
+            || echo "[-] Failed to delete branch $BRANCH"
