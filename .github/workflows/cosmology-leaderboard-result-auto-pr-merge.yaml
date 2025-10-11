@@ -13,6 +13,9 @@ jobs:
   auto-pr-merge:
     runs-on: ubuntu-latest
 
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,9 +37,7 @@ jobs:
           else
             echo "[-] No PR found for $BRANCH"
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+        
       - name: Delete branch after merge
         if: success()
         run: |
@@ -45,5 +46,3 @@ jobs:
           gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${BRANCH}" \
             && echo "[+] Deleted branch $BRANCH" \
             || echo "[-] Failed to delete branch $BRANCH"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
