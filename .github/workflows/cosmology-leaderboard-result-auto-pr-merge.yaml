@@ -1,0 +1,46 @@
+name: Auto PR and Merge for Result Branches
+
+on:
+  push:
+    branches:
+      - 'auto-results-*'  # Trigger on branches that start with auto-results-
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-and-merge-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Auto: Merge results from ${{ github.ref_name }}"
+          body: |
+            This PR was automatically created from branch `${{ github.ref_name }}`.
+            It contains the latest results update.
+          base: master
+          branch: ${{ github.ref_name }}
+          draft: false
+
+      - name: Merge Pull Request
+        if: steps.create_pr.outputs.pull-request-number != ''
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
+          merge-method: squash
+
+      - name: Auto-merge PR (alternative approach)
+        if: steps.create_pr.outputs.pull-request-number != ''
+        uses: pascalgn/automerge-action@v0.16.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: squash
+          PULL_REQUEST: ${{ steps.create_pr.outputs.pull-request-number }}
