@@ -1,676 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Weak Lensing Uncertainty Challenge | FAIR Universe</title>
-    <meta content="Uncertainty aware large-compute-scale AI platform for high energy physics and cosmology" name="description">
-    <meta content="FAIR Universe, High Energy Physics, Cosmology, Uncertainty aware" name="keywords">
-  
-    <!-- Favicons -->
-    <link href="assets/img/favicon.ico" rel="icon">
-  
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css?v=2" rel="stylesheet">
-    <link href="assets/css/higgs.css?v=2" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Weak Lensing Uncertainty Challenge | FAIR Universe</title>
+  <meta content="Uncertainty aware large-compute-scale AI platform for high energy physics and cosmology"
+    name="description">
+  <meta content="FAIR Universe, High Energy Physics, Cosmology, Uncertainty aware" name="keywords">
 
-    <style>
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        background: white;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      }
-      th, td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
-      }
-      th {
-        background-color: #012041;
-        color: white;
-        cursor: pointer;
-      }
-      tr:hover {
-        background-color: #f1f1f1;
-      }
-      .rank-1 {
-        background: linear-gradient(90deg, #fff3c4, #ffe793) !important;
-        font-weight: 600;
-      }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
 
-      .rank-2 {
-        background: linear-gradient(90deg, #dbe9ff, #b3d1ff);
-        font-weight: 600;
-      }
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-      .rank-3 {
-        background: linear-gradient(90deg, #ffe3e8, #ffbcc7);
-        font-weight: 600;
-      }
-    </style>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css?v=2" rel="stylesheet">
+  <link href="assets/css/higgs.css?v=2" rel="stylesheet">
+
+  <style>
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #012041;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    th:hover {
+      background-color: #2980b9;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    tr:hover {
+      background-color: #e3f2fd;
+      transition: background-color 0.2s ease;
+    }
+
+    .rank-1 {
+      background: linear-gradient(90deg, #fff3c4, #ffe793) !important;
+      font-weight: 600;
+    }
+
+    .rank-2 {
+      background: linear-gradient(90deg, #dbe9ff, #b3d1ff);
+      font-weight: 600;
+    }
+
+    .rank-3 {
+      background: linear-gradient(90deg, #ffe3e8, #ffbcc7);
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- ======= Hero Section ======= -->
-    <section class="hero">
-        <h1>FAIR Universe: Weak Lensing Uncertainty Challenge</h1>        
-    </section>
-    <!-- End Hero Section -->
+  <!-- ======= Hero Section ======= -->
+  <section class="hero">
+    <h1>FAIR Universe: Weak Lensing Uncertainty Challenge</h1>
+  </section>
+  <!-- End Hero Section -->
 
-  
-    <!-- ======= Leaderboard Section ======= -->
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2>Leaderboard - Phase 1</h2>
-                <span>Last updated: November 07, 2025 at 05:27 PM UTC</span>
-                <div class="row">
-                    <div>
-                      <table id="results-table">
-          
-                        <thead>
-                          <tr>
-                            <th onclick="sortTable(0)">Rank</th>
-                            <th onclick="sortTable(1)">Username</th>
-                            <th onclick="sortTable(2)">Submission ID</th>
-                            <th onclick="sortTable(3)">Method Name</th>
-                            <th onclick="sortTable(4)">Score</th>
-                            <th onclick="sortTable(5)">MSE</th>
-                            <th onclick="sortTable(6)">R²</th>
-                            <th onclick="sortTable(7)">Coverage</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          
-                          <tr class="rank-1">
-                            <td>1</td>
-                            <td>cmbagent</td>
-                            <td>415530</td>
-                            <td>licongxu_cmbagent</td>
-                            <td>11.6588</td>
-                            <td>0.1037</td>
-                            <td>0.8944</td>
-                            <td>0.7296</td>
-                          </tr>
-                          
-                          <tr class="rank-2">
-                            <td>2</td>
-                            <td>shubhojit</td>
-                            <td>409282</td>
-                            <td>CNNv48</td>
-                            <td>11.6117</td>
-                            <td>0.1040</td>
-                            <td>0.8941</td>
-                            <td>0.6810</td>
-                          </tr>
-                          
-                          <tr class="rank-3">
-                            <td>3</td>
-                            <td>eiffl</td>
-                            <td>416881</td>
-                            <td>EiffL_fxcjm9ws</td>
-                            <td>11.5214</td>
-                            <td>0.1073</td>
-                            <td>0.8907</td>
-                            <td>0.6866</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>4</td>
-                            <td>piyush555</td>
-                            <td>394590</td>
-                            <td>dns_l</td>
-                            <td>11.4681</td>
-                            <td>0.1077</td>
-                            <td>0.8902</td>
-                            <td>0.7103</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>5</td>
-                            <td>licongxu</td>
-                            <td>408006</td>
-                            <td>cmbagent</td>
-                            <td>11.3116</td>
-                            <td>0.1137</td>
-                            <td>0.8842</td>
-                            <td>0.7184</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>6</td>
-                            <td>wenghuikun</td>
-                            <td>411281</td>
-                            <td>1103_144729 v2</td>
-                            <td>11.3065</td>
-                            <td>0.1096</td>
-                            <td>0.8884</td>
-                            <td>0.6604</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>7</td>
-                            <td>jagoncalves</td>
-                            <td>387421</td>
-                            <td>20251008_173243</td>
-                            <td>11.2183</td>
-                            <td>0.1166</td>
-                            <td>0.8812</td>
-                            <td>0.6815</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>8</td>
-                            <td>azhang81</td>
-                            <td>414000</td>
-                            <td>random forest</td>
-                            <td>11.2172</td>
-                            <td>0.1149</td>
-                            <td>0.8829</td>
-                            <td>0.6490</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>9</td>
-                            <td>hnayak</td>
-                            <td>413583</td>
-                            <td>updated3</td>
-                            <td>11.1505</td>
-                            <td>0.1177</td>
-                            <td>0.8801</td>
-                            <td>0.7130</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>10</td>
-                            <td>trnkhanh</td>
-                            <td>402786</td>
-                            <td>MB_CM1</td>
-                            <td>11.1239</td>
-                            <td>0.1186</td>
-                            <td>0.8792</td>
-                            <td>0.6790</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>11</td>
-                            <td>andry834</td>
-                            <td>410713</td>
-                            <td>25-11-03-01-38</td>
-                            <td>11.1073</td>
-                            <td>0.1181</td>
-                            <td>0.8797</td>
-                            <td>0.7208</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>12</td>
-                            <td>anilipour</td>
-                            <td>406448</td>
-                            <td>cmbagent</td>
-                            <td>11.0893</td>
-                            <td>0.1176</td>
-                            <td>0.8802</td>
-                            <td>0.6937</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>13</td>
-                            <td>mmayr</td>
-                            <td>416555</td>
-                            <td>rn_plat_mcmc</td>
-                            <td>11.0768</td>
-                            <td>0.1172</td>
-                            <td>0.8806</td>
-                            <td>0.6904</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>14</td>
-                            <td>levisevans</td>
-                            <td>402355</td>
-                            <td>argustarv1</td>
-                            <td>10.9509</td>
-                            <td>0.1235</td>
-                            <td>0.8741</td>
-                            <td>0.7201</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>15</td>
-                            <td>young_hee</td>
-                            <td>409010</td>
-                            <td>model8</td>
-                            <td>10.9447</td>
-                            <td>0.1225</td>
-                            <td>0.8752</td>
-                            <td>0.7037</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>16</td>
-                            <td>yuedong0607</td>
-                            <td>413305</td>
-                            <td>25-11-04-06-12</td>
-                            <td>10.9161</td>
-                            <td>0.1222</td>
-                            <td>0.8755</td>
-                            <td>0.7350</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>17</td>
-                            <td>sakib</td>
-                            <td>375549</td>
-                            <td>CNN</td>
-                            <td>10.8968</td>
-                            <td>0.1215</td>
-                            <td>0.8762</td>
-                            <td>0.7216</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>18</td>
-                            <td>hao_chun_liang</td>
-                            <td>403355</td>
-                            <td>ensemble_calibrated_exp6_20251027_230608</td>
-                            <td>10.7856</td>
-                            <td>0.1265</td>
-                            <td>0.8711</td>
-                            <td>0.6934</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>19</td>
-                            <td>ibrahime</td>
-                            <td>395630</td>
-                            <td>Ens</td>
-                            <td>10.6497</td>
-                            <td>0.1313</td>
-                            <td>0.8663</td>
-                            <td>0.7115</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>20</td>
-                            <td>zdu863</td>
-                            <td>416459</td>
-                            <td>CNN-06</td>
-                            <td>10.6023</td>
-                            <td>0.1310</td>
-                            <td>0.8665</td>
-                            <td>0.7412</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>21</td>
-                            <td>exaltedjoseph</td>
-                            <td>386759</td>
-                            <td>op-muy</td>
-                            <td>10.5397</td>
-                            <td>0.1335</td>
-                            <td>0.8640</td>
-                            <td>0.6860</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>22</td>
-                            <td>spierre</td>
-                            <td>392544</td>
-                            <td>Scattering Transform Iso</td>
-                            <td>10.4216</td>
-                            <td>0.1378</td>
-                            <td>0.8596</td>
-                            <td>0.7024</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>23</td>
-                            <td>nthday_jpg</td>
-                            <td>403758</td>
-                            <td>resnetlite</td>
-                            <td>10.4075</td>
-                            <td>0.1346</td>
-                            <td>0.8629</td>
-                            <td>0.6155</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>24</td>
-                            <td>chenghantsai</td>
-                            <td>385173</td>
-                            <td>Optuna CNN 515 depth</td>
-                            <td>10.3880</td>
-                            <td>0.1341</td>
-                            <td>0.8634</td>
-                            <td>0.7980</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>25</td>
-                            <td>sher_s</td>
-                            <td>413038</td>
-                            <td>20251103_193017</td>
-                            <td>10.3542</td>
-                            <td>0.1388</td>
-                            <td>0.8586</td>
-                            <td>0.6709</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>26</td>
-                            <td>saibaster</td>
-                            <td>394896</td>
-                            <td>xgb</td>
-                            <td>9.9422</td>
-                            <td>0.1563</td>
-                            <td>0.8407</td>
-                            <td>0.7021</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>27</td>
-                            <td>faithful</td>
-                            <td>404896</td>
-                            <td>newcnnv8</td>
-                            <td>9.7855</td>
-                            <td>0.1628</td>
-                            <td>0.8342</td>
-                            <td>0.7121</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>28</td>
-                            <td>jhu_suicee</td>
-                            <td>390514</td>
-                            <td>STILI</td>
-                            <td>9.7047</td>
-                            <td>0.1545</td>
-                            <td>0.8426</td>
-                            <td>0.6521</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>29</td>
-                            <td>ehernandez</td>
-                            <td>dev</td>
-                            <td>trial 1</td>
-                            <td>9.5518</td>
-                            <td>0.1525</td>
-                            <td>0.8447</td>
-                            <td>0.6014</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>30</td>
-                            <td>pajucg2</td>
-                            <td>379685</td>
-                            <td>cnn</td>
-                            <td>9.4793</td>
-                            <td>0.1648</td>
-                            <td>0.8321</td>
-                            <td>0.7889</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>31</td>
-                            <td>dingjch</td>
-                            <td>386819</td>
-                            <td>N25_R01-0059_use5grps_SBI</td>
-                            <td>9.3897</td>
-                            <td>0.1659</td>
-                            <td>0.8310</td>
-                            <td>0.6100</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>32</td>
-                            <td>benduong</td>
-                            <td>375155</td>
-                            <td>OkeMCMC</td>
-                            <td>9.2332</td>
-                            <td>0.1765</td>
-                            <td>0.8202</td>
-                            <td>0.6717</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>33</td>
-                            <td>ssunao</td>
-                            <td>386814</td>
-                            <td>angular power spectrum + second third, and fourth order aperture mass statistics</td>
-                            <td>9.1654</td>
-                            <td>0.1749</td>
-                            <td>0.8218</td>
-                            <td>0.6304</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>34</td>
-                            <td>pruhlman</td>
-                            <td>405469</td>
-                            <td>test</td>
-                            <td>9.1346</td>
-                            <td>0.1763</td>
-                            <td>0.8204</td>
-                            <td>0.7060</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>35</td>
-                            <td>klinjin</td>
-                            <td>382413</td>
-                            <td>mcmc_flat_baseline</td>
-                            <td>8.9681</td>
-                            <td>0.1859</td>
-                            <td>0.8107</td>
-                            <td>0.7034</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>36</td>
-                            <td>farhankhan</td>
-                            <td>406278</td>
-                            <td>55</td>
-                            <td>8.8996</td>
-                            <td>0.1860</td>
-                            <td>0.8105</td>
-                            <td>0.7135</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>37</td>
-                            <td>aravindsugu</td>
-                            <td>377027</td>
-                            <td>v2</td>
-                            <td>8.8820</td>
-                            <td>0.1870</td>
-                            <td>0.8096</td>
-                            <td>0.7019</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>38</td>
-                            <td>hzume</td>
-                            <td>398085</td>
-                            <td>exp001-sub3</td>
-                            <td>8.8059</td>
-                            <td>0.1745</td>
-                            <td>0.8223</td>
-                            <td>0.5871</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>39</td>
-                            <td>uccaeid</td>
-                            <td>406469</td>
-                            <td>66</td>
-                            <td>8.7837</td>
-                            <td>0.1899</td>
-                            <td>0.8065</td>
-                            <td>0.7190</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>40</td>
-                            <td>mehlagh</td>
-                            <td>405368</td>
-                            <td>333</td>
-                            <td>8.7817</td>
-                            <td>0.1885</td>
-                            <td>0.8080</td>
-                            <td>0.7099</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>41</td>
-                            <td>pwchang</td>
-                            <td>363706</td>
-                            <td>Baseline_CNN_MCMC_it100k_006_new_data_score</td>
-                            <td>8.6809</td>
-                            <td>0.1949</td>
-                            <td>0.8015</td>
-                            <td>0.6909</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>42</td>
-                            <td>mshamani</td>
-                            <td>408878</td>
-                            <td>oo</td>
-                            <td>8.6106</td>
-                            <td>0.1962</td>
-                            <td>0.8001</td>
-                            <td>0.7049</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>43</td>
-                            <td>ahajighasem</td>
-                            <td>408876</td>
-                            <td>uu</td>
-                            <td>8.5027</td>
-                            <td>0.1983</td>
-                            <td>0.7980</td>
-                            <td>0.7015</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>44</td>
-                            <td>fudawei</td>
-                            <td>393359</td>
-                            <td>CNN direct</td>
-                            <td>8.3463</td>
-                            <td>0.1963</td>
-                            <td>0.8001</td>
-                            <td>0.5693</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>45</td>
-                            <td>mathfan2020</td>
-                            <td>399432</td>
-                            <td>CNNv3</td>
-                            <td>7.7054</td>
-                            <td>0.2126</td>
-                            <td>0.7834</td>
-                            <td>0.5739</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>46</td>
-                            <td>carmenmisa</td>
-                            <td>367924</td>
-                            <td>Phase 1 Starting Kit</td>
-                            <td>4.6266</td>
-                            <td>0.3472</td>
-                            <td>0.6464</td>
-                            <td>0.6737</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>47</td>
-                            <td>ragansu</td>
-                            <td>357613</td>
-                            <td>model_starting_kit</td>
-                            <td>4.6012</td>
-                            <td>0.3483</td>
-                            <td>0.6453</td>
-                            <td>0.6736</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>48</td>
-                            <td>garyhornbill28</td>
-                            <td>369950</td>
-                            <td>CNN_2</td>
-                            <td>-1854.2724</td>
-                            <td>163.5679</td>
-                            <td>-165.6699</td>
-                            <td>0.7210</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>49</td>
-                            <td>satyamk</td>
-                            <td>416715</td>
-                            <td>CNN_MCMC_nonoise</td>
-                            <td>-2436.6913</td>
-                            <td>2.5564</td>
-                            <td>-1.6021</td>
-                            <td>0.0406</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>50</td>
-                            <td>kadidiakonate</td>
-                            <td>384213</td>
-                            <td>dummy submission</td>
-                            <td>-3795.6503</td>
-                            <td>27.1434</td>
-                            <td>-26.6566</td>
-                            <td>0.6766</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>51</td>
-                            <td>lupodda</td>
-                            <td>367070</td>
-                            <td>DummySubmission</td>
-                            <td>-56532.8470</td>
-                            <td>4325.4582</td>
-                            <td>-4405.5530</td>
-                            <td>0.9149</td>
-                          </tr>
-                          
-                          <tr class="rank-">
-                            <td>52</td>
-                            <td>rishi</td>
-                            <td>372606</td>
-                            <td>registration</td>
-                            <td>-56532.8470</td>
-                            <td>4325.4582</td>
-                            <td>-4405.5530</td>
-                            <td>0.9149</td>
-                          </tr>
-                          
-                        </tbody>
-                        
-                    </table>
-                  </div>
-                </div>
+
+  <!-- ======= Leaderboard Section ======= -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Leaderboard - Phase 1</h2>
+        <span>Last updated: November 10, 2025 at 09:35 AM UTC</span>
+        <div class="row">
+          <div>
+            <table id="results-table">
+
+              <thead>
+                <tr>
+                  <th onclick="sortTable(0)">Rank</th>
+                  <th onclick="sortTable(1)">Username</th>
+                  <th onclick="sortTable(2)">Submission ID</th>
+                  <th onclick="sortTable(3)">Method Name</th>
+                  <th onclick="sortTable(4)">Score</th>
+                  <th onclick="sortTable(5)">MSE</th>
+                  <th onclick="sortTable(6)">R²</th>
+                  <th onclick="sortTable(7)">Coverage</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="rank-1">
+                  <td>1</td>
+                  <td>cmbagent (team)</td>
+                  <td>417346</td>
+                  <td>licongxu_cmbagent</td>
+                  <td>11.6601</td>
+                  <td>0.1044</td>
+                  <td>0.8937</td>
+                  <td>0.7056</td>
+                </tr>
+                
+                <tr class="rank-2">
+                  <td>2</td>
+                  <td>shubhojit</td>
+                  <td>417744</td>
+                  <td>CNNv48_</td>
+                  <td>11.6192</td>
+                  <td>0.1025</td>
+                  <td>0.8956</td>
+                  <td>0.6583</td>
+                </tr>
+                
+                <tr class="rank-3">
+                  <td>3</td>
+                  <td>eiffl (team)</td>
+                  <td>416881</td>
+                  <td>EiffL_fxcjm9ws</td>
+                  <td>11.5214</td>
+                  <td>0.1073</td>
+                  <td>0.8907</td>
+                  <td>0.6866</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>4</td>
+                  <td>piyush555</td>
+                  <td>394590</td>
+                  <td>dns_l</td>
+                  <td>11.4681</td>
+                  <td>0.1077</td>
+                  <td>0.8902</td>
+                  <td>0.7103</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>5</td>
+                  <td>azhang81</td>
+                  <td>417740</td>
+                  <td>1</td>
+                  <td>11.3609</td>
+                  <td>0.1112</td>
+                  <td>0.8867</td>
+                  <td>0.6623</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>6</td>
+                  <td>THUML (team)</td>
+                  <td>418089</td>
+                  <td>1109_003108</td>
+                  <td>11.3467</td>
+                  <td>0.1094</td>
+                  <td>0.8885</td>
+                  <td>0.6866</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>7</td>
+                  <td>jagoncalves</td>
+                  <td>418273</td>
+                  <td>20251008_173243</td>
+                  <td>11.2437</td>
+                  <td>0.1160</td>
+                  <td>0.8818</td>
+                  <td>0.6835</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>8</td>
+                  <td>hnayak</td>
+                  <td>413583</td>
+                  <td>updated3</td>
+                  <td>11.1505</td>
+                  <td>0.1177</td>
+                  <td>0.8801</td>
+                  <td>0.7130</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>9</td>
+                  <td>mmayr</td>
+                  <td>418093</td>
+                  <td>pp2_NL128_LD512_NB2_NSA6_NH16_LR2e4_BS32_NP200</td>
+                  <td>11.1417</td>
+                  <td>0.1170</td>
+                  <td>0.8808</td>
+                  <td>0.6893</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>10</td>
+                  <td>andry834</td>
+                  <td>418653</td>
+                  <td>25-11-10-04-11</td>
+                  <td>11.1339</td>
+                  <td>0.1169</td>
+                  <td>0.8809</td>
+                  <td>0.7265</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>11</td>
+                  <td>DOT (team)</td>
+                  <td>402786</td>
+                  <td>MB_CM1</td>
+                  <td>11.1239</td>
+                  <td>0.1186</td>
+                  <td>0.8792</td>
+                  <td>0.6790</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>12</td>
+                  <td>MaDESYn (team)</td>
+                  <td>402355</td>
+                  <td>argustarv1</td>
+                  <td>10.9509</td>
+                  <td>0.1235</td>
+                  <td>0.8741</td>
+                  <td>0.7201</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>13</td>
+                  <td>young_hee</td>
+                  <td>409010</td>
+                  <td>model8</td>
+                  <td>10.9447</td>
+                  <td>0.1225</td>
+                  <td>0.8752</td>
+                  <td>0.7037</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>14</td>
+                  <td>Yuedong (team)</td>
+                  <td>413305</td>
+                  <td>25-11-04-06-12</td>
+                  <td>10.9161</td>
+                  <td>0.1222</td>
+                  <td>0.8755</td>
+                  <td>0.7350</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>15</td>
+                  <td>mehlagh</td>
+                  <td>418322</td>
+                  <td>333</td>
+                  <td>10.9026</td>
+                  <td>0.1241</td>
+                  <td>0.8735</td>
+                  <td>0.6867</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>16</td>
+                  <td>sakib</td>
+                  <td>375549</td>
+                  <td>CNN</td>
+                  <td>10.8968</td>
+                  <td>0.1215</td>
+                  <td>0.8762</td>
+                  <td>0.7216</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>17</td>
+                  <td>uccaeid</td>
+                  <td>418285</td>
+                  <td>33</td>
+                  <td>10.8004</td>
+                  <td>0.1262</td>
+                  <td>0.8714</td>
+                  <td>0.6905</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>18</td>
+                  <td>hao_chun_liang</td>
+                  <td>403355</td>
+                  <td>ensemble_calibrated_exp6_20251027_230608</td>
+                  <td>10.7856</td>
+                  <td>0.1265</td>
+                  <td>0.8711</td>
+                  <td>0.6934</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>19</td>
+                  <td>mshamani</td>
+                  <td>418541</td>
+                  <td>555</td>
+                  <td>10.7853</td>
+                  <td>0.1274</td>
+                  <td>0.8703</td>
+                  <td>0.6854</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>20</td>
+                  <td>ibrahime</td>
+                  <td>395630</td>
+                  <td>Ens</td>
+                  <td>10.6497</td>
+                  <td>0.1313</td>
+                  <td>0.8663</td>
+                  <td>0.7115</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>21</td>
+                  <td>zdu863</td>
+                  <td>416459</td>
+                  <td>CNN-06</td>
+                  <td>10.6023</td>
+                  <td>0.1310</td>
+                  <td>0.8665</td>
+                  <td>0.7412</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>22</td>
+                  <td>exaltedjoseph</td>
+                  <td>386759</td>
+                  <td>op-muy</td>
+                  <td>10.5397</td>
+                  <td>0.1335</td>
+                  <td>0.8640</td>
+                  <td>0.6860</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>23</td>
+                  <td>farhankhan</td>
+                  <td>418297</td>
+                  <td>ww</td>
+                  <td>10.4593</td>
+                  <td>0.1423</td>
+                  <td>0.8551</td>
+                  <td>0.6709</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>24</td>
+                  <td>nthday_jpg</td>
+                  <td>403758</td>
+                  <td>resnetlite</td>
+                  <td>10.4075</td>
+                  <td>0.1346</td>
+                  <td>0.8629</td>
+                  <td>0.6155</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>25</td>
+                  <td>chenghantsai</td>
+                  <td>385173</td>
+                  <td>Optuna CNN 515 depth</td>
+                  <td>10.3880</td>
+                  <td>0.1341</td>
+                  <td>0.8634</td>
+                  <td>0.7980</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>26</td>
+                  <td>sher_s</td>
+                  <td>413038</td>
+                  <td>20251103_193017</td>
+                  <td>10.3542</td>
+                  <td>0.1388</td>
+                  <td>0.8586</td>
+                  <td>0.6709</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>27</td>
+                  <td>ehernandez</td>
+                  <td>dev</td>
+                  <td>patience20_samples5000</td>
+                  <td>10.0903</td>
+                  <td>0.1469</td>
+                  <td>0.8504</td>
+                  <td>0.6020</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>28</td>
+                  <td>saibaster</td>
+                  <td>394896</td>
+                  <td>xgb</td>
+                  <td>9.9422</td>
+                  <td>0.1563</td>
+                  <td>0.8407</td>
+                  <td>0.7021</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>29</td>
+                  <td>klinjin</td>
+                  <td>418739</td>
+                  <td>CNN_robust_V7</td>
+                  <td>9.8305</td>
+                  <td>0.1523</td>
+                  <td>0.8448</td>
+                  <td>0.7877</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>30</td>
+                  <td>faithful</td>
+                  <td>404896</td>
+                  <td>newcnnv8</td>
+                  <td>9.7855</td>
+                  <td>0.1628</td>
+                  <td>0.8342</td>
+                  <td>0.7121</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>31</td>
+                  <td>jhu_suicee</td>
+                  <td>390514</td>
+                  <td>STILI</td>
+                  <td>9.7047</td>
+                  <td>0.1545</td>
+                  <td>0.8426</td>
+                  <td>0.6521</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>32</td>
+                  <td>bmdlln</td>
+                  <td>416985</td>
+                  <td>test</td>
+                  <td>9.6539</td>
+                  <td>0.1499</td>
+                  <td>0.8473</td>
+                  <td>0.6774</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>33</td>
+                  <td>satyamk</td>
+                  <td>418158</td>
+                  <td>CNN_mcmc_opt</td>
+                  <td>9.6007</td>
+                  <td>0.1646</td>
+                  <td>0.8323</td>
+                  <td>0.7149</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>34</td>
+                  <td>limabar</td>
+                  <td>418604</td>
+                  <td>CNN_Direct_12</td>
+                  <td>9.5449</td>
+                  <td>0.1593</td>
+                  <td>0.8377</td>
+                  <td>0.7369</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>35</td>
+                  <td>pajucg2</td>
+                  <td>379685</td>
+                  <td>cnn</td>
+                  <td>9.4793</td>
+                  <td>0.1648</td>
+                  <td>0.8321</td>
+                  <td>0.7889</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>36</td>
+                  <td>dingjch</td>
+                  <td>386819</td>
+                  <td>N25_R01-0059_use5grps_SBI</td>
+                  <td>9.3897</td>
+                  <td>0.1659</td>
+                  <td>0.8310</td>
+                  <td>0.6100</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>37</td>
+                  <td>ahajighasem</td>
+                  <td>417093</td>
+                  <td>33</td>
+                  <td>9.3369</td>
+                  <td>0.1743</td>
+                  <td>0.8224</td>
+                  <td>0.7195</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>38</td>
+                  <td>Trung Le (team)</td>
+                  <td>375155</td>
+                  <td>OkeMCMC</td>
+                  <td>9.2332</td>
+                  <td>0.1765</td>
+                  <td>0.8202</td>
+                  <td>0.6717</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>39</td>
+                  <td>ssunao</td>
+                  <td>386814</td>
+                  <td>angular power spectrum + second third, and fourth order aperture mass statistics</td>
+                  <td>9.1654</td>
+                  <td>0.1749</td>
+                  <td>0.8218</td>
+                  <td>0.6304</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>40</td>
+                  <td>pruhlman</td>
+                  <td>405469</td>
+                  <td>test</td>
+                  <td>9.1346</td>
+                  <td>0.1763</td>
+                  <td>0.8204</td>
+                  <td>0.7060</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>41</td>
+                  <td>aravindsugu</td>
+                  <td>377027</td>
+                  <td>v2</td>
+                  <td>8.8820</td>
+                  <td>0.1870</td>
+                  <td>0.8096</td>
+                  <td>0.7019</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>42</td>
+                  <td>hzume</td>
+                  <td>398085</td>
+                  <td>exp001-sub3</td>
+                  <td>8.8059</td>
+                  <td>0.1745</td>
+                  <td>0.8223</td>
+                  <td>0.5871</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>43</td>
+                  <td>pwchang</td>
+                  <td>363706</td>
+                  <td>Baseline_CNN_MCMC_it100k_006_new_data_score</td>
+                  <td>8.6809</td>
+                  <td>0.1949</td>
+                  <td>0.8015</td>
+                  <td>0.6909</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>44</td>
+                  <td>fudawei</td>
+                  <td>393359</td>
+                  <td>CNN direct</td>
+                  <td>8.3463</td>
+                  <td>0.1963</td>
+                  <td>0.8001</td>
+                  <td>0.5693</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>45</td>
+                  <td>mathfan2020</td>
+                  <td>399432</td>
+                  <td>CNNv3</td>
+                  <td>7.7054</td>
+                  <td>0.2126</td>
+                  <td>0.7834</td>
+                  <td>0.5739</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>46</td>
+                  <td>carmenmisa</td>
+                  <td>367924</td>
+                  <td>Phase 1 Starting Kit</td>
+                  <td>4.6266</td>
+                  <td>0.3472</td>
+                  <td>0.6464</td>
+                  <td>0.6737</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>47</td>
+                  <td>ragansu</td>
+                  <td>357613</td>
+                  <td>model_starting_kit</td>
+                  <td>4.6012</td>
+                  <td>0.3483</td>
+                  <td>0.6453</td>
+                  <td>0.6736</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>48</td>
+                  <td>garyhornbill28</td>
+                  <td>369950</td>
+                  <td>CNN_2</td>
+                  <td>-1854.2724</td>
+                  <td>163.5679</td>
+                  <td>-165.6699</td>
+                  <td>0.7210</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>49</td>
+                  <td>kadidiakonate</td>
+                  <td>384213</td>
+                  <td>dummy submission</td>
+                  <td>-3795.6503</td>
+                  <td>27.1434</td>
+                  <td>-26.6566</td>
+                  <td>0.6766</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>50</td>
+                  <td>lupodda</td>
+                  <td>367070</td>
+                  <td>DummySubmission</td>
+                  <td>-56532.8470</td>
+                  <td>4325.4582</td>
+                  <td>-4405.5530</td>
+                  <td>0.9149</td>
+                </tr>
+                
+                <tr class="rank-">
+                  <td>51</td>
+                  <td>rishi</td>
+                  <td>372606</td>
+                  <td>registration</td>
+                  <td>-56532.8470</td>
+                  <td>4325.4582</td>
+                  <td>-4405.5530</td>
+                  <td>0.9149</td>
+                </tr>
+                
+              </tbody>
+
+            </table>
+          </div>
         </div>
-    </section>
-    <!-- End Leaderboard Section -->
+      </div>
+  </section>
+  <!-- End Leaderboard Section -->
 
   <script>
     function sortTable(n) {
@@ -705,4 +721,5 @@
   </script>
 
 </body>
+
 </html>
