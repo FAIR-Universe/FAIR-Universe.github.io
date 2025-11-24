@@ -45,7 +45,7 @@
   padding: 8px 12px;
   border-radius: 5px;
   font-weight: bold;
-  color: #ffffff; 
+  color: #2a2a2a; 
   margin-right: 10px;
   min-width: 150px;
   text-align: center;
@@ -68,44 +68,44 @@
   font-style: italic;
 }
 
-.gold {
-  background-color: #ffd700;
-}
-
-.silver {
-  background-color: #c0c0c0;
-}
-
-.bronze {
-  background-color: #cd7f32;
-}
-
-.jury {
-  background-color: #132999;
-}
-
-.keynote {
-  background-color: #6106ab;
-}
-
-.break {
-  background-color: #000000;
-}
-
-.FAIR {
-  background-color: #f91a8d;
-}
 
 .color1 {
-  background-color: #ef4660;
+  background-color: #b8e9ff;
 }
 
 .color2 {
-  background-color: #00846b;
+  background-color: #dab8ff;
 }
 
 .color3 {
-  background-color: #12ae00;
+  background-color: #dcdcdc;
 }
 
+.color4 {
+  background-color: #b8ffda;
+}
+
+.color5 {
+  background-color: #ffe9b8;
+}
+
+.color6 {
+  background-color: #ffc2e2;
+}
+
+.color7 {
+  background-color: #fff4b8;
+}
+
+.color8 {
+  background-color: #b8fff2;
+}
+
+.color9 {
+  background-color: #b8c9ff;
+}
+
+.color10 {
+  background-color: #ffddb8;
+}
 
