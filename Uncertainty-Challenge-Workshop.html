@@ -21,10 +21,31 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css?v=2" rel="stylesheet">
     <link href="assets/css/higgs.css?v=2" rel="stylesheet">
+    <style>
+        .home-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: #3498db;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+    .home-button:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+</style>
 
 </head>
 <body>
-
+    <a class="home" href="index.html"><i class="bi bi-arrow-left"></i></a>
     <!-- ======= Hero Section ======= -->
     <section class="hero">
         <h1>FAIR Universe: Uncertainty Challenge Workshop</h1>        
