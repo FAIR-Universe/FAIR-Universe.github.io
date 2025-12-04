@@ -25,64 +25,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css?v=2" rel="stylesheet">
   <link href="assets/css/higgs.css?v=2" rel="stylesheet">
+  <link href="assets/css/leaderboard-table.css?v=2" rel="stylesheet">
 
-  <style>
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 20px 0;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    th,
-    td {
-      padding: 12px 15px;
-      text-align: center;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #012041;
-      color: white;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      position: relative;
-    }
-
-    th:hover {
-      background-color: #2980b9;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f8f9fa;
-    }
-
-    tr:hover {
-      background-color: #e3f2fd;
-      transition: background-color 0.2s ease;
-    }
-
-    .rank-1 {
-      background: linear-gradient(90deg, #fff3c4, #ffe793) !important;
-      font-weight: 600;
-    }
-
-    .rank-2 {
-      background: linear-gradient(90deg, #dbe9ff, #b3d1ff);
-      font-weight: 600;
-    }
-
-    .rank-3 {
-      background: linear-gradient(90deg, #ffe3e8, #ffbcc7);
-      font-weight: 600;
-    }
-  </style>
 </head>
 
 <body>
@@ -94,12 +38,260 @@
   </section>
   <!-- End Hero Section -->
 
+  <!-- ======= About Section ======= -->
+  <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Winners</h2>
+          <p>Phase 1 of the NeurIPS 2025 Weak Lensing ML Uncertainty Challenge has come to an end. We have announced the winners of the competition.</p>
+          <p>In the final evaluation, the final submitted models are tested on a new holdout dataset that contains new realizations of convergence maps obtained from (i) the original cosmologies in the training data, and (ii) new cosmologies that were not seen in the training data. The new cosmologies are sampled from the same prior distribution as the training data.</p>
+          <p>After extensive studies, we have decided to award the prizes based on the final rankings in three final leaderboards. The three leaderboards evaluate the model performance on (i), (ii), and the average of (i) and (ii), respectively, to reflect the strengths and robustness of each model.</p>
+            <!-- Winners 1 -->
+            <h4>1. Final leaderboard evaluated solely on (i):</h4>
+            <div class="row">
+              <div class="col-lg-1"></div>
+                <div class="table-responsive col-lg-10">
+                  <table class="table caption-top">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Particpant</th>
+                        <th>Final Score</th>
+                        <th>Mean MSE (Standerdized)</th>
+                        <th>Mean Coverage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1st</td>
+                        <td>cmbagent</td>
+                        <td>11.7029</td>
+                        <td>0.1033</td>
+                        <td>0.7000</td>
+                      </tr>
+                      <tr>
+                        <td>2nd</td>
+                        <td>eiffl</td>
+                        <td>11.6535</td>
+                        <td>0.1038</td>
+                        <td>0.7087</td>
+                      </tr>
+                      <tr>
+                        <td>3rd</td>
+                        <td>Shubhojit</td>
+                        <td>11.5987</td>
+                        <td>0.1032</td>
+                        <td>0.6583</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>We will award the prizes to <b>cmbagent</b>,  <b>eiffl</b>, and  <b>Shubhojit</b> for extraordinary performance on the original cosmologies.</p>
+            </div>
+            <!-- Winners 2 -->
+            <h4>2. Final leaderboard evaluated solely on (ii):</h4>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="table-responsive col-lg-10">
+                  <table class="table caption-top">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Particpant</th>
+                        <th>Final Score</th>
+                        <th>Mean MSE (Standerdized)</th>
+                        <th>Mean Coverage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1st</td>
+                        <td>Shubhojit</td>
+                        <td>11.3606</td>
+                        <td>0.0968</td>
+                        <td>0.6619</td>
+                      </tr>
+                      <tr>
+                        <td>2nd Tie</td>
+                        <td>THUML</td>
+                        <td>11.0511</td>
+                        <td>0.1051</td>
+                        <td>0.6733</td>
+                      </tr>
+                      <tr>
+                        <td>2nd Tie</td>
+                        <td>jagoncalves</td>
+                        <td>11.0367</td>
+                        <td>0.1073</td>
+                        <td>0.6683</td>
+                      </tr>
+                      <tr>
+                        <td>2nd Tie</td>
+                        <td>andry834</td>
+                        <td>11.0014</td>
+                        <td>0.1076</td>
+                        <td>0.7228</td>
+                      </tr>
+                      <tr>
+                        <td>2nd Tie</td>
+                        <td>jhu_suicee</td>
+                        <td>10.9892</td>
+                        <td>0.1067</td>
+                        <td>0.6451</td>
+                      </tr>
+                      <tr>
+                        <td>2nd Tie</td>
+                        <td>eiffl</td>
+                        <td>10.9883</td>
+                        <td>0.1074</td>
+                        <td>0.6818</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <p>We will award <b>Shubhojit</b> for the achievement in the best model generalization, with a score clearly separated from the other participants. The other five participants on the leaderboard cannot be separated in a significant way due to the limited samples of (ii).</p>
+            </div>
+            <!-- Winners 3 -->
+            <h4>3. Final leaderboard from the average of the score obtained on (i) and (ii):</h4>
+            <div class="row">
+              <div class="col-lg-1"></div>
+                <div class="table-responsive col-lg-10">
+                  <table class="table caption-top">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Particpant</th>
+                        <th>Final Score</th>
+                        <th>Mean MSE (Standerdized)</th>
+                        <th>Mean Coverage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1st</td>
+                        <td>Shubhojit</td>
+                        <td>11.4796</td>
+                        <td>0.1000</td>
+                        <td>0.6601</td>
+                      </tr>
+                      <tr>
+                        <td>2nd</td>
+                        <td>eiffl</td>
+                        <td>11.3209</td>
+                        <td>0.1056</td>
+                        <td>0.6953</td>
+                      </tr>
+                      <tr>
+                        <td>3rd</td>
+                        <td>THUML</td>
+                        <td>11.2848</td>
+                        <td>0.1060</td>
+                        <td>0.6789</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>We will award the prizes to <b>Shubhojit</b>, <b>eiffl</b>, and <b>THUML</b> for demonstrating excellent performance on both new and old cosmologies.</p>
+            </div>
+            <!-- After winners -->
+            <p>With the three leaderboards, the winners are awarded the following amount of cash prizes (names are listed in alphabetic order and only team lead's institute is listed):</p>
+            <div class="row section-body">
+              <ul>
+                <li><b>Shubhojit Naskar</b> from Indian Institute of Technology Delhi in India will win <b>$1,750.</b></li>
+                <li><b>Cmbagent</b> (Erwan Allys, Boris Bolliet, Tom Borret, Celia Lecat, Andy Nilipour, Sebastien Pierre, Licong Xu) from University of Cambridge in United Kingdom will win <b>$1,400.</b></li>
+                <li><b>eiffl</b> (Transatlantic Dream Team: Noe Dia, Sacha Guerrini, Wassim Kablan, François Lanusse, Julia Linhart, Laurence Perreault-Levasseur, Benjamin Remy, Sammy Sharieff, Andreas Tersenov, Justine Zeghal) from Université Paris-Saclay in France will win <b>$1,300.</b></li>
+                <li><b>THUML</b> (Mingsheng Long, Yuezhou Ma, Yuanxu Sun, Huikun Weng, Haixu Wu, Hang Zhou) from Tsinghua University in China will win <b>$350.</b></li>
+              </ul>
+            </div>
+            <p>All winners will present at our <b>NeurIPS 2025 Competition Workshop:</b></p>
+            <div class="row section-body">
+              <ul>
+                <li><b>Time:</b> December 7th (Sunday) 11:00 AM -- 1:45 PM (PT)</li>
+                <li><b>Location:</b> Exhibit Hall G, H in San Diego Convention Center</li>
+                <li><b>Agenda & talks:</b> <a target="_blank" href="https://neurips.cc/virtual/2025/loc/san-diego/competition/127728">https://neurips.cc/virtual/2025/loc/san-diego/competition/127728</a></li>
+            </div>
+            <p>We will prepare a paper documenting the top solutions with the winning teams after the workshop. The dataset will also be released permanently to serve as a permanent benchmark.</p>
+            <p>Congratulations to all the winning teams!</p>
+        </div>
+      </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- ======= About Section ======= -->
+  <section>
+      <div class="container">
+          <div class="section-title">
+              <h2>About the Challenge</h2>
+              <p>The large-scale structure of the universe—the cosmic web of galaxies, galaxy clusters, and dark matter spanning hundreds of millions of light-years—encodes essential information about the composition, evolution, and fundamental laws governing the cosmos. However, the majority of matter in the universe is dark matter, which does not interact with light and can only be observed indirectly through its gravitational effects. According to Einstein’s theory of general relativity, the gravitational field of this large-scale structure bends the path of light traveling through the universe. Weak gravitational lensing refers to the subtle, coherent distortions in the observed shapes of distant galaxies caused by the deflection of light as it traverses the inhomogeneous matter distribution of the universe. By statistically analyzing these distortions across large regions of the sky, weak lensing provides a powerful probe of the matter distribution and the underlying cosmological model that governs the expansion of the universe.</p>
+              <p>Traditional analysis based on two-point correlation functions can only capture limited amount of information from the weak lensing data (2D fields similar to images). To fully exploit the non-Gaussian features present in the cosmic web, higher-order statistics and modern machine learning (ML) methods have become increasingly important. These approaches, including deep learning and simulation-based inference, have been shown to extract significant more information in weak lensing maps than traditional techniques. However, different analyses assume different dataset setups and lead to different results, making it hard to directly compare with existing approaches. Furthermore, most (if not all) of these methods rely heavily on simulations that may not accurately represent real data due to modeling approximations and missing systematics.</p>
+              <p>This competition is motivated by the need to quantify and compare the information content that different analysis methods—ranging from classical statistics to ML-based models—can extract from weak lensing maps, while also evaluating their robustness to simulation inaccuracies and observational systematics.</p>
+              <p>The outcomes of this competition are expected to guide the development of next-generation weak lensing analysis pipelines, foster cross-disciplinary collaboration between the astrophysics and machine learning communities, and ultimately improve the reliability of cosmological inference from current and upcoming surveys such as LSST, Euclid, and the Roman Space Telescope. By explicitly addressing simulation-model mismatch and the need to quantify systematic uncertainties, this competition emphasizes scientific robustness and interpretability, aligning with the growing emphasis on trustworthy ML in scientific domains.</p>
+            </div>
+      </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- ======= Organizers Section ======= -->
+  <section>
+      <div class="container">
+          <div class="section-title">
+              <h2>Organizers</h2>
+              <p>We gratefully acknowledge the efforts of the FAIR Universe Team, composed of researchers dedicated to advancing high energy physics, cosmology, and machine learning for the benefit of the scientific community.</p>
+              <p>For inquiries, please contact us at: <a href="mailto:fair-universe@lbl.gov">fair-universe@lbl.gov</a></p>
+          </div>
+          <div class="row section-body">
+              <ul>
+                  <li>Wahid Bhimji</li>
+                  <li>Paolo Calafiura</li>
+                  <li>Ragansu Chakkappai</li>
+                  <li>Po-Wen Chang</li>
+                  <li>Yuan-Tang Chou</li>
+                  <li>Biwei Dai</li>
+                  <li>Sascha Diefenbacher</li>
+                  <li>Steven Farrell</li>
+                  <li>Aishik Ghosh</li>
+                  <li>Isabelle Guyon</li>
+                  <li>Chris Harris</li>
+                  <li>Shih-Chieh Hsu</li>
+                  <li>Elham Khoda</li>
+                  <li>Benjamin Nachman</li>
+                  <li>Peter Nugent</li>
+                  <li>David Rousseau</li>
+                  <li>Uros Seljak</li>
+                  <li>Benjamin Thorne</li>
+                  <li>Ihsan Ullah</li>
+                  <li>Daniel Whiteson</li>
+                  <li>Yulei Zhang</li>
+              </ul>
+          </div>
+      </div>
+  </section>
+  <!-- End Organizers Section -->
+  
+  <!-- ======= Competition Section ======= -->
+  <section>
+      <div class="container">
+          <div class="section-title">
+              <h2>Competition Material</h2>
+              <p>Find all the competition resources below:</p>
+              <div class="row section-body">
+                <ul>
+                    <li><strong><a href="https://www.codabench.org/competitions/8934/" target="_blank">Codabench Challenge Page:</a></strong> This serves as the platform to submit entries to the competition.</li>
+                    <li><strong><a href="https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master/" target="_blank">GitHub Repository:</a></strong> This hosts the code for testing submissions, as well as starting kit notebooks</li>
+                </ul>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- End Competition Section -->
+
 
   <!-- ======= Leaderboard Section ======= -->
   <section>
     <div class="container">
       <div class="section-title">
-        <h2>Leaderboard - Phase 1</h2>
+        <h2>Phase 1 Codabench Leaderboard</h2>
         <span>Last updated: November 17, 2025 at 02:05 PM UTC</span>
         <div class="row">
           <div class="table-responsive">
