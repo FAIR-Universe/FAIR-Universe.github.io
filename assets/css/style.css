@@ -1294,7 +1294,9 @@ section {
 .bg-winners{
   background-color: #a7943d;
 }
-
+.bg-workshop{
+  background-color: #aa025c;
+}
 .bg-codabench:hover {
   background-color: #0f151b;
   color: white;
@@ -1315,11 +1317,11 @@ section {
   color: white;
 }
 
-
-.btn-back{
-  margin-top: 10px;
-  margin-left: 10px;
+.bg-workshop:hover{
+  background-color: #70013c;
+  color: white;
 }
+
 
 .github{
   background-color: #000000;
