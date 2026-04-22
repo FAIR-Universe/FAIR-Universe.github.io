@@ -1288,6 +1288,9 @@ section {
 .bg-arxiv{
   background-color: #b31a1a;
 }
+.bg-github {
+  background-color: #32363b;
+}
 .bg-zenodo{
   background-color: #0249aa;
 }
@@ -1304,6 +1307,10 @@ section {
 
 .bg-arxiv:hover {
   background-color: #600f0f;
+  color: white;
+}
+.bg-github:hover {
+  background-color: #0d1117;
   color: white;
 }
 

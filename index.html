@@ -86,22 +86,21 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>NeurIPS 2025 Weak Lensing Uncertainty Challenge </h2>
-          <div class="alert alert-success"><b>The Phase 1 of the competition has concluded! Please check out the final results in our NeurIPS 2025 Competition Workshop on December 7th!</b></div>
-          <a class="btn btn-lg bg-arxiv text-light" href="https://fair-universe.lbl.gov/tutorials/WL_Competition_Overview.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Challenge Overview</a>
-          <a class="btn btn-lg bg-codabench text-light" href="https://www.codabench.org/competitions/8934/" target="_blank"><i class="bi bi-globe2"></i> Challenge Website</a>
-          <a class="btn btn-lg bg-winners text-light" href="https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge.html" target="_blank"><i class="bi bi-trophy"></i> Phase-1 Winners</a>
-          <a class="btn btn-lg bg-workshop text-light" href="https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge-Workshop.html" target="_blank"><i class="bi bi-book"></i> Workshop Agenda</a>
+          <h2>Weak Lensing ML Uncertainty Challenge Phase 2</h2>
+          <div class="alert alert-warning"><b>The competition is now open for submission until 11:59 PM October 11th 2026 (UTC)!</b></div>
+          <a class="btn btn-lg bg-codabench text-light" href="https://www.codabench.org/competitions/10902/" target="_blank"><i class="bi bi-globe2"></i> Challenge Website</a>
+          <a class="btn btn-lg bg-arxiv text-light" target="_blank" href="https://arxiv.org/abs/2604.14451"><i class="bi bi-journal-text"></i> Challenge White Paper</a>
+          <a class="btn btn-lg bg-github text-light" target="_blank" href="https://github.com/FAIR-Universe/Cosmology_Challenge"><i class="bi bi-github"></i> Challenge GitHub Repo</a>
         </div>
         <div class="section-title">
           <p>
-            Weak gravitational lensing reveals the large-scale structure of the universe by observing subtle distortions in galaxy shapes due to intervening matter. Traditional methods mainly capture Gaussian information through two-point statistics. However, non-Gaussian features present in the cosmic web are crucial for studying the underlying physics of structure formation, dark matter distributions, and cosmological parameters, motivating the use of higher-order statistics and advanced machine learning (ML) techniques to extract richer information from the weak lensing data. The primary difficulty is handling systematic uncertainties arising from simulation inaccuracies and observational biases.
+            Weak gravitational lensing reveals the large-scale structure of the universe by observing subtle distortions in galaxy shapes due to intervening matter. To fully exploit the non-Gaussian features present in the cosmic web, modern machine learning (ML) methods have become increasingly important. These approaches, including deep learning and simulation-based inference, have been shown to extract significant more information in weak lensing maps than traditional techniques. However, different analyses assume different dataset setups and lead to different results, making it hard to directly compare with existing approaches. Furthermore, most (if not all) of these methods rely heavily on simulations that may not accurately represent real data due to modeling approximations and missing systematics. We can frame this problem as an out-of-distribution (OoD) detection task; that is, whether or not the actual observations deviate from the simulation or forward model used to train our models?
           </p>
           <p>
-            Through this challenge, participants will analyze a suite of carefully designed mock weak lensing maps with known cosmological parameters, constructed to include variations in simulation fidelity and observational systematics. By comparing the performance and robustness of different methods in a controlled setting, the challenge aims to systematically assess their ability to extract cosmological information while quantifying their sensitivity to modeling assumptions and systematics.
+            Through this competition, participants will analyze a suite of carefully designed mock weak lensing convergence maps (2D fields similar to images). Participants have to develop methods for the OoD detection, with the goal of identifying a fraction of the test data that deviates from the training distribution.
           </p>
           <p>
-            The outcomes of this challenge are expected to guide the development of next-generation weak lensing analysis pipelines, foster cross-disciplinary collaboration between the astrophysics and machine learning communities, and ultimately improve the reliability of cosmological inference from current and upcoming surveys such as DES, Rubin's LSST, Euclid, and the Roman Space Telescope. By explicitly addressing simulation-model mismatch and the need to quantify systematic uncertainties, this challenge emphasizes scientific robustness and interpretability, aligning with the growing emphasis on trustworthy ML in scientific domains.
+            The outcomes of this competition are expected to guide the development of next-generation weak lensing analysis pipelines, foster cross-disciplinary collaboration between the astrophysics and machine learning communities, and ultimately improve the reliability of cosmological inference from current and upcoming surveys such as LSST, Euclid, and the Roman Space Telescope. By explicitly addressing simulation-model mismatch and the need to quantify systematic uncertainties, this competition emphasizes scientific robustness and interpretability, aligning with the growing emphasis on trustworthy ML in scientific domains.
           </p>
         </div>
       </div>
@@ -189,6 +188,17 @@
         <div class="row">
           <div class="col-lg-1"></div>
           <div class="col-lg-8">
+
+            <!-- News item -->
+            <div class="resume-item">
+              <h4>FAIR Universe – Weak Lensing Uncertainty Challenge Phase 2 Launched</h4>
+              <span class="badge bg-gray">April 22, 2026</span>
+              <p><em>We have launched the Phase-2 of the Weak Lensing Uncertainty Challenge. The challenge website is available on Codabench.
+              </em></p>
+              <ul>
+                <li><a href="https://www.codabench.org/competitions/10902/" target="_blank">Weak Lensing Uncertainty Challenge Phase 2 - Codabench website</a></li>
+              </ul>
+            </div>
 
             <!-- News item -->
             <div class="resume-item">
